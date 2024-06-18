@@ -27,9 +27,9 @@ namespace Prueba4
 
 
         public static List<Escaleras> Esca = new List<Escaleras>();
-        List<int> datos1 = new List<int>();
-        List<int> datos2 = new List<int>();
-        List<int> datos3 = new List<int>();
+        //List<int> datos1 = new List<int>();
+        //List<int> datos2 = new List<int>();
+        //List<int> datos3 = new List<int>();
         int nitems;
         public UserControl3()
         {
@@ -46,6 +46,9 @@ namespace Prueba4
             // Convertir los valores de los TextBoxes y añadir un nuevo elemento a la colección
             Escaleras esc = new Escaleras(int.Parse(TB_1.Text), TB_2.Text, TB_3.Text);
             Esca.Add(esc);
+
+
+
             Items.Add(esc);
 
             // Limpiar los TextBoxes después de añadir el elemento

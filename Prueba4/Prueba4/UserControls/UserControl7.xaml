@@ -4,21 +4,52 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Prueba4.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TabControl Margin="0,200,190,0" VerticalAlignment="Top" Width="619" Style="{StaticResource TabC1}">
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" Width="Auto" Height="Auto">
+    <Grid Background="White" Width="Auto" Height="Auto" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="HOLAAAA" />
+        </Grid>
+
+
+        <TabControl Grid.Row="1" VerticalAlignment="Top" Width="619" Style="{StaticResource TabC1}" >
+                <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
+                    <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Title="Y Axis" LabelFormatter="{Binding YFormatter}"/>
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+                </TabItem>
+                <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
+                    <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Title="Y Axis" LabelFormatter="{Binding YFormatter}"/>
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+                </TabItem>
             <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
-                <Grid  Background="{StaticResource color1}">
-                    <Label Content="HOLA" />
-                </Grid>
-            </TabItem>
-            <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
-                <Grid  Background="{StaticResource color2}">
-                    <Label Content="HOLA" />
-                </Grid>
+                <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
+                    </lvc:CartesianChart.AxisX>
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis Title="Y Axis" LabelFormatter="{Binding YFormatter}"/>
+                    </lvc:CartesianChart.AxisY>
+                </lvc:CartesianChart>
             </TabItem>
         </TabControl>
+ 
 
     </Grid>
 </UserControl>

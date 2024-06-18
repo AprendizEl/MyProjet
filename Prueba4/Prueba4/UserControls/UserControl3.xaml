@@ -23,7 +23,7 @@
         <Button Style="{StaticResource BTNA}" Content="Agregar" HorizontalAlignment="Left" Margin="58,341,0,0" VerticalAlignment="Top" Height="40" Width="162" Click="Button_Click" Grid.RowSpan="2"/>
 
 
-         <DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}">
+         <DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Tipo" Width="*" Binding="{Binding tipo}"/>
