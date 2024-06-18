@@ -23,14 +23,12 @@
         <Button Style="{StaticResource BTNA}" Content="Agregar" HorizontalAlignment="Left" Margin="58,341,0,0" VerticalAlignment="Top" Height="40" Width="162" Click="Button_Click" Grid.RowSpan="2"/>
 
 
-        <DataGrid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="Dataso"  Grid.Column="1">
-            <DataGrid ItemsSource="{Binding Esca}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Identifier" Binding="{Binding datos1}" />
-                    <DataGridTextColumn Header="Full Name" Binding="{Binding datos2}" />
-                    <DataGridTextColumn Header="Age (Years)" Binding="{Binding datos3}" />
-                </DataGrid.Columns>
-            </DataGrid>
+         <DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Tipo" Width="*" Binding="{Binding tipo}"/>
+                <DataGridTextColumn Header="Nombre" Width="*" Binding="{Binding name}"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 

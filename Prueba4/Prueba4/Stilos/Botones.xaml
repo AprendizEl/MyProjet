@@ -25,7 +25,7 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Margin" Value="0,0,0,5"/>
                 <Setter Property="Background" Value="{StaticResource panelOverColor}"/>
-                <Setter Property="Foreground" Value="{StaticResource titleColor3}"/>
+                <Setter Property="Foreground" Value="{StaticResource titleColor1}"/>
                 <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
             </Trigger>
             <!--Activated button style-->

@@ -111,6 +111,7 @@
     <Compile Include="CD_BH\ViewModelBase.cs" />
     <Compile Include="Clases\Class1.cs" />
     <Compile Include="Clases\Escaleras.cs" />
+    <Compile Include="Clases\KDA_TOTAL.cs" />
     <Compile Include="UserControls\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
@@ -129,6 +130,9 @@
     <Compile Include="UserControls\UserControl6.xaml.cs">
       <DependentUpon>UserControl6.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl7.xaml.cs">
+      <DependentUpon>UserControl7.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -143,7 +147,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Stilos\style3.xaml">
+    <Page Include="Stilos\Tabs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,6 +192,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserControl6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControl7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

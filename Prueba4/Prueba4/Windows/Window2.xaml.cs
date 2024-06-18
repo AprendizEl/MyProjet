@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 using System.Runtime;
 using System.Windows.Interop;
 using System.ComponentModel;
+using Prueba4.UserControls;
 
 namespace Prueba4.Windows
 {
@@ -93,6 +94,18 @@ namespace Prueba4.Windows
         {
             item7.Children.Clear();
             item7.Children.Add(new UserControl1());
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            item7.Children.Clear();
+            item7.Children.Add(new UserControl5());
+        }
+
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            item7.Children.Clear();
+            item7.Children.Add(new UserControl7());
         }
     }
 }

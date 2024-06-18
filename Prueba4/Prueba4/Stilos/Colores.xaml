@@ -2,17 +2,17 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!--Background Colors-->
-    <Color x:Key="primaryBackColor1">#525252</Color>
-    <Color x:Key="primaryBackColor2">#414141</Color>
+    <Color x:Key="primaryBackColor1">#3A4750</Color>
+    <Color x:Key="primaryBackColor2">#303841</Color>
     <Color x:Key="secondaryBackColor1">#313131</Color>
     <Color x:Key="secondaryBackColor2">#414141</Color>
     <!--Window Border Colors-->
-    <Color x:Key="winBorderColor1">#EC625F</Color>
-    <Color x:Key="winBorderColor2">#F8E559</Color>
+    <Color x:Key="winBorderColor1">#00ADB5</Color>
+    <Color x:Key="winBorderColor2">#FBF9F1</Color>
     <Color x:Key="winBorderColor3">#EC630F</Color>
     
     <!--Color Palette-->
-    <SolidColorBrush x:Key="color1" Color="#EC625F"/>
+    <SolidColorBrush x:Key="color1" Color="#00ADB5"/>
     <SolidColorBrush x:Key="color2" Color="#784DFD"/>
     <SolidColorBrush x:Key="color3" Color="#4ADAEC"/>
     <SolidColorBrush x:Key="color4" Color="#FB539B"/>
@@ -33,7 +33,7 @@
     
     <!--Panel Colors-->
     <SolidColorBrush x:Key="panelColor" Color="#C7C8CC"/>
-    <SolidColorBrush x:Key="panelOverColor" Color="#414141"/>
+    <SolidColorBrush x:Key="panelOverColor" Color="#303841"/>
     <SolidColorBrush x:Key="panelActiveColor" Color="#313131"/>
     
     <!--Button Colors-->

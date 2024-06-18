@@ -21,7 +21,7 @@
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="{StaticResource winBorderColor1}" Offset="0" />
                     <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.75" />
-                    <GradientStop Color="{StaticResource winBorderColor3}" Offset="1" />
+                    <!--<GradientStop Color="{StaticResource winBorderColor3}" Offset="1" />-->
                 </LinearGradientBrush>
             </Border.BorderBrush>
 
@@ -105,7 +105,7 @@
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color1}"
                                  IsChecked="False"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 Command="{Binding ShowHomeViewCommand}" Checked="RadioButton_Checked_2">
                             
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="Home" Style="{StaticResource menuButtonIcon}"/>
@@ -114,7 +114,7 @@
                         </RadioButton>
 
                         <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color2}"
+                                 Tag="{StaticResource color1}"
                                  Click="RadioButton_Click">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
@@ -123,7 +123,7 @@
                         </RadioButton>
 
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color4}"
+                                     Tag="{StaticResource color1}"
                                      Click="RadioButton_Click_1">
 
                             <StackPanel Orientation="Horizontal">
@@ -133,7 +133,7 @@
                         </RadioButton>
 
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color5}"
+                                     Tag="{StaticResource color1}"
                                      Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
@@ -142,8 +142,8 @@
                         </RadioButton>
 
                         <RadioButton Style="{StaticResource menuButton}"
-         Tag="{StaticResource color6}"
-         Command="{Binding ShowCustomerViewCommand}">
+                                     Tag="{StaticResource color1}"
+                                     Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked_1">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
@@ -151,8 +151,8 @@
                         </RadioButton>
 
                         <RadioButton Style="{StaticResource menuButton}"
-         Tag="{StaticResource color7}"
-         Command="{Binding ShowCustomerViewCommand}">
+                                     Tag="{StaticResource color1}"
+                                     Command="{Binding ShowCustomerViewCommand}">   
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
@@ -172,7 +172,7 @@
                     Grid.Column="1">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
-                            <GradientStop Color="{StaticResource primaryBackColor1}" Offset="0"/>
+                            <!--<GradientStop Color="{StaticResource primaryBackColor1}" Offset="0"/>-->
                             <GradientStop Color="{StaticResource primaryBackColor2}" Offset="1"/>
                         </LinearGradientBrush>
                     </Border.Background>

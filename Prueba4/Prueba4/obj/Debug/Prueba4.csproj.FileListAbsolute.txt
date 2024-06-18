@@ -90,7 +90,6 @@ C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\bin\Debug\MaterialDe
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.csproj.AssemblyReference.cache
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\Botones.baml
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\Colores.baml
-C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\style3.baml
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\Style2.baml
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\Styles.baml
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\MainWindow.g.cs
@@ -122,3 +121,6 @@ C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.cs
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.csproj.Up2Date
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.exe
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.pdb
+C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\Tabs.baml
+C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl7.g.cs
+C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl7.baml
