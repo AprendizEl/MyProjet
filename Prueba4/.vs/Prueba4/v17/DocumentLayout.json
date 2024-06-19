@@ -1,12 +1,102 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|c:\\users\\jugad\\onedrive\\escritorio\\myprojet\\prueba4\\prueba4\\usercontrols\\usercontrol7.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol7.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|c:\\users\\jugad\\onedrive\\escritorio\\myprojet\\prueba4\\prueba4\\usercontrols\\usercontrol7.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol7.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jugad\\AppData\\Local\\Temp\\.vsdbgsrc\\324e5a0fdc97a693bff9ab95c8194e893b61442192c878679558a01a7f740128\\ChartValues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|c:\\users\\jugad\\onedrive\\escritorio\\myprojet\\prueba4\\prueba4\\usercontrols\\usercontrol5.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol5.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|c:\\users\\jugad\\onedrive\\escritorio\\myprojet\\prueba4\\prueba4\\windows\\window2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\windows\\window2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChartValues.cs",
+              "DocumentMoniker": "C:\\Users\\jugad\\AppData\\Local\\Temp\\.vsdbgsrc\\324e5a0fdc97a693bff9ab95c8194e893b61442192c878679558a01a7f740128\\ChartValues.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\324e5a0fdc97a693bff9ab95c8194e893b61442192c878679558a01a7f740128\\ChartValues.cs",
+              "ToolTip": "C:\\Users\\jugad\\AppData\\Local\\Temp\\.vsdbgsrc\\324e5a0fdc97a693bff9ab95c8194e893b61442192c878679558a01a7f740128\\ChartValues.cs [Solo lectura]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\324e5a0fdc97a693bff9ab95c8194e893b61442192c878679558a01a7f740128\\ChartValues.cs [Solo lectura]",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAUwDAAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T03:21:22.964Z",
+              "EditorCaption": " [Solo lectura]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserControl7.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl7.xaml.cs",
+              "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl7.xaml.cs",
+              "ToolTip": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl7.xaml.cs",
+              "RelativeToolTip": "Prueba4\\UserControls\\UserControl7.xaml.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAuwDwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T03:20:25.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserControl7.xaml",
+              "DocumentMoniker": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl7.xaml",
+              "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl7.xaml",
+              "ToolTip": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl7.xaml",
+              "RelativeToolTip": "Prueba4\\UserControls\\UserControl7.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-19T03:00:37.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserControl5.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl5.xaml.cs",
+              "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl5.xaml.cs",
+              "ToolTip": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl5.xaml.cs",
+              "RelativeToolTip": "Prueba4\\UserControls\\UserControl5.xaml.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAwwDgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T03:01:23.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Window2.xaml",
+              "DocumentMoniker": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\Windows\\Window2.xaml",
+              "RelativeDocumentMoniker": "Prueba4\\Windows\\Window2.xaml",
+              "ToolTip": "C:\\Users\\jugad\\OneDrive\\Escritorio\\MyProjet\\Prueba4\\Prueba4\\Windows\\Window2.xaml",
+              "RelativeToolTip": "Prueba4\\Windows\\Window2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-19T02:59:10.945Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

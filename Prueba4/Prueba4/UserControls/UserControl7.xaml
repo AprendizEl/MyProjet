@@ -19,7 +19,7 @@
 
         <TabControl Grid.Row="1" VerticalAlignment="Top" Width="619" Style="{StaticResource TabC1}" >
                 <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
-                    <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
+                    <lvc:CartesianChart Grid.Row="1" Name="Grafic1" Series="{Binding SeriesCollection}" Height="150">
                         <lvc:CartesianChart.AxisX>
                             <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
                         </lvc:CartesianChart.AxisX>
