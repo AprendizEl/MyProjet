@@ -188,3 +188,4 @@ C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.csproj.CoreC
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.csproj.Up2Date
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.exe
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.pdb
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\Listbox.baml

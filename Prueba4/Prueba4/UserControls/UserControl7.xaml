@@ -10,14 +10,79 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="170"/>
         </Grid.RowDefinitions>
+        
+        
+        
         <Grid Grid.Row="0">
-            <TextBlock Text="HOLAAAA" />
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="175"/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <Border Grid.Column="1" CornerRadius="10" >
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Aqua" />
+                </Border.BorderBrush>
+
+                <Border.Background>
+                    <SolidColorBrush Color="Aqua"/>
+                </Border.Background>
+
+                <Grid>
+                    
+
+
+                    <StackPanel Orientation="Vertical" Margin="10,30" >
+                        <Grid Margin="0,8">
+                            <Border CornerRadius="5" >
+                                <Border.BorderBrush>
+                                    <SolidColorBrush Color="Transparent" />
+                                </Border.BorderBrush>
+                                <Border.Background>
+                                    <SolidColorBrush Color="AliceBlue" />
+                                </Border.Background>
+
+                                <TextBlock Text="HOLAAAA" Margin="10,10" />
+
+                            </Border>
+                            
+                            
+                        </Grid>
+                        <Grid Background="Gray" Margin="0,8">
+                            <TextBlock Text="HOLAAAA" Margin="10,10" />
+                        </Grid>
+                        <Grid Background="Gray" Margin="0,8">
+                            <TextBlock Text="HOLAAAA" Margin="10,10" />
+                        </Grid>
+                        <Grid Background="Gray" Margin="0,8">
+                            <TextBlock Text="HOLAAAA" Margin="10,10" />
+                        </Grid>
+
+
+
+                    </StackPanel>
+                </Grid>
+                
+                
+                
+                
+                
+                
+                
+            </Border>
+            
+            
         </Grid>
 
-
-        <TabControl Grid.Row="1" VerticalAlignment="Top" Width="619" Style="{StaticResource TabC1}" >
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Grid>
+                
+            </Grid>
+            <TabControl Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Style="{StaticResource TabC1}" Background="Black" >
                 <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
                     <lvc:CartesianChart Grid.Row="1" Name="Grafic1" Series="{Binding SeriesCollection}" Height="150">
                         <lvc:CartesianChart.AxisX>
@@ -38,17 +103,21 @@
                         </lvc:CartesianChart.AxisY>
                     </lvc:CartesianChart>
                 </TabItem>
-            <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
-                <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
-                    <lvc:CartesianChart.AxisX>
-                        <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
-                    </lvc:CartesianChart.AxisX>
-                    <lvc:CartesianChart.AxisY>
-                        <lvc:Axis Title="Y Axis" LabelFormatter="{Binding YFormatter}"/>
-                    </lvc:CartesianChart.AxisY>
-                </lvc:CartesianChart>
-            </TabItem>
-        </TabControl>
+                <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
+                    <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Title="Y Axis" LabelFormatter="{Binding YFormatter}"/>
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+                </TabItem>
+            </TabControl>
+
+        </StackPanel>
+
+       
  
 
     </Grid>

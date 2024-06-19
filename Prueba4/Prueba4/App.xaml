@@ -16,7 +16,7 @@
                 <ResourceDictionary Source="/Stilos/Colores.xaml"/>
                 <ResourceDictionary Source="/Stilos/Botones.xaml"/>
                 <ResourceDictionary Source="/Stilos/Tabs.xaml"/>
-
+                <ResourceDictionary Source="/Stilos/Listbox.xaml"/>
                 <ResourceDictionary Source="/Stilos/Style2.xaml"/>
                 <ResourceDictionary Source="/Stilos/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
