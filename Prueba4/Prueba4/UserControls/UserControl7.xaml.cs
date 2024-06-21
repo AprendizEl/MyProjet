@@ -22,6 +22,7 @@ namespace Prueba4.UserControls
     /// </summary>
     public partial class UserControl7 : UserControl
     {
+        
         List<int> listx = new List<int>();
         List<int> listy = new List<int>();
         List<Escaleras> obj = new List<Escaleras>();
@@ -59,8 +60,8 @@ namespace Prueba4.UserControls
             // Establecer el contexto de datos
             Grafic1.DataContext = this;
 
+        
         }
-
 
 
         private void relleo()
@@ -76,7 +77,8 @@ namespace Prueba4.UserControls
 
         }
 
-
+      
     }
 }
 
+            

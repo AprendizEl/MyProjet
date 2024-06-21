@@ -189,3 +189,5 @@ C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.csproj.Up2Da
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.exe
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Prueba4.pdb
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\Stilos\Listbox.baml
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl8.g.cs
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl8.baml

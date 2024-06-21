@@ -152,7 +152,7 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource color1}"
-                                     Command="{Binding ShowCustomerViewCommand}">   
+                                     Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked_3">   
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
