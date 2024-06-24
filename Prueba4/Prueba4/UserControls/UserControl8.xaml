@@ -12,10 +12,11 @@
     <Grid>
         <lvc:PieChart LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}">
             <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Maria" Values="{Binding Series1}" DataLabels="True" Fill="{StaticResource color1}" Opacity="0.7"
+                <lvc:PieSeries Title="Win" Values="{Binding Series1}" DataLabels="True" Fill="{StaticResource color1}" Opacity="0.7"
                                LabelPoint="{Binding PointLabel}"/>
-                <lvc:PieSeries Title="Charles" Values="{Binding Series2}" DataLabels="True" Fill="#EEEEEE" Opacity="0.7"
+                <lvc:PieSeries Title="Derrota" Values="{Binding Series2}" DataLabels="True" Fill="#EEEEEE" Opacity="0.7"
                                LabelPoint="{Binding PointLabel}"/>
+
             </lvc:PieChart.Series>
         </lvc:PieChart>
     </Grid>

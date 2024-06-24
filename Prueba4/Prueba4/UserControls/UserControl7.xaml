@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Prueba4.UserControls"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" Width="Auto" Height="Auto">
-    <Grid Background="White" Width="Auto" Height="Auto" >
+    <Grid Width="Auto" Height="Auto" >
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,12 +19,12 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="105"/>
+                <ColumnDefinition Width="610"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
 
-            <Border Grid.Column="2" CornerRadius="10" >
+            <Border Grid.Column="2" CornerRadius="10" Margin="10"  >
                 <Border.BorderBrush>
                     <SolidColorBrush Color="Aqua" />
                 </Border.BorderBrush>
@@ -35,6 +35,16 @@
 
                 <Grid>
                     <StackPanel Orientation="Vertical" Margin="10,30" >
+
+                        <Border  BorderThickness="0,0,0,2" Margin="-10,-30,-10,0">
+                            <Border.BorderBrush >
+                                <SolidColorBrush Color="Black" />
+                            </Border.BorderBrush>
+                            <TextBlock Text="PARTIDAS" HorizontalAlignment="Center" Margin="0,10" />
+                            
+                        </Border>
+                        
+                    
                         <Grid Margin="0,8">
                             <Border CornerRadius="5" >
                                 <Border.BorderBrush>
@@ -70,38 +80,92 @@
 
             </Border>
 
-            <Grid Grid.Column="0" >
+
+
+            <Border Grid.Column="1" CornerRadius="20" Margin="10" >
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Black" />
+                </Border.BorderBrush>
+                <Border.Background>
+                    <SolidColorBrush Color="Cyan" />
+                </Border.Background>
+
+                <Grid>
+                    <Label Content="Champs" />
+                </Grid>
+                
+            </Border>
+
+
+            <Grid Grid.Column="0">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
-
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <Label Content="HOLAAAA" />
-                </Grid>
-                <Grid Grid.Row="1">
-                    <Label Content="HOLAAAA" />
-                </Grid>
 
+                <Border Grid.Row="0" CornerRadius="20" Margin="10" >
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="Black" />
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <SolidColorBrush Color="Cyan" />
+                    </Border.Background>
+
+
+
+
+
+                    <StackPanel>
+                        <Grid Grid.Row="0" >
+                            <Label Content="RaTE" />
+                        </Grid>
+                        
+
+                    </StackPanel>
+
+
+
+                </Border>
+                <Border Grid.Row="01" CornerRadius="20" Margin="10" >
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="Black" />
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <SolidColorBrush Color="Cyan" />
+                    </Border.Background>
+
+
+
+
+
+                    <StackPanel>
+                        <Grid Grid.Row="0" >
+                            <Label Content="Champ" />
+                        </Grid>
+                      
+
+
+                    </StackPanel>
+
+
+
+                </Border>
 
             </Grid>
-            <Grid Grid.Column="1" >
-                <Grid>
-                    <Label Content="HOLAAAA" />
-                </Grid>
+            
+           
 
-            </Grid>
 
         </Grid>
         <Grid Grid.Row="1">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="800" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0">
+            <Grid Grid.Column="0" Margin="10">
                 <TabControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Style="{StaticResource TabC1}" Background="Black" >
                     <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
                         <lvc:CartesianChart Grid.Row="1" Name="Grafic1" Series="{Binding SeriesCollection}" Height="150">
@@ -137,7 +201,30 @@
             </Grid>
 
             <Grid Grid.Column="1">
-                <Label Content="HOLAAA" />
+                <Border  CornerRadius="20" Margin="10" >
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="Black" />
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <SolidColorBrush Color="Cyan" />
+                    </Border.Background>
+
+
+
+
+
+                    <StackPanel >
+                        <Grid Grid.Row="0" >
+                            <Label Content="RaTE" />
+                        </Grid>
+
+
+                    </StackPanel>
+
+
+
+                </Border>
+
 
             </Grid>
             

@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:Prueba4.Windows"
         mc:Ignorable="d"
         
+        ResizeMode="NoResize"
+        
         AllowsTransparency="True"
         Background="Transparent"
         WindowStyle="None"
