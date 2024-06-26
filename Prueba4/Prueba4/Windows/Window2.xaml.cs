@@ -111,7 +111,7 @@ namespace Prueba4.Windows
         private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
         {
             item7.Children.Clear();
-            item7.Children.Add(new UserControl8());
+            item7.Children.Add(new UserControl9());
         }
     }
 }

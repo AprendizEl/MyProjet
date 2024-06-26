@@ -67,6 +67,9 @@
     <Reference Include="MaterialDesignThemes.Wpf.AddOns, Version=0.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignInXamlToolkitAddOns.0.0.6\lib\net471\MaterialDesignThemes.Wpf.AddOns.dll</HintPath>
     </Reference>
+    <Reference Include="Spire.Doc, Version=12.2.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Doc.12.2.0\lib\net40\Spire.Doc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -135,6 +138,9 @@
     </Compile>
     <Compile Include="UserControls\UserControl8.xaml.cs">
       <DependentUpon>UserControl8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl9.xaml.cs">
+      <DependentUpon>UserControl9.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
@@ -207,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserControl8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControl9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
