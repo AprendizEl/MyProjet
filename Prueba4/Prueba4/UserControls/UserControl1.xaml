@@ -8,13 +8,9 @@
              Height="auto" Width="auto">
 
     <Grid>
-        <DataGrid x:Name="dataGrid" CanUserAddRows="True"  CanUserDeleteRows="True" 
-                  CanUserResizeColumns="True" CanUserSortColumns="True" CanUserReorderColumns="False"
-                   Margin="10" 
-                  IsReadOnly="False"
-                  Background="{StaticResource color1}" AutoGenerateColumns="True">
-          
-            
+        <DataGrid  x:Name="ExcelGrid" AutoGenerateColumns="True" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserDeleteRows="False" >
+
+
         </DataGrid>
     </Grid>
 </UserControl>

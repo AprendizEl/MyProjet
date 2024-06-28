@@ -28,7 +28,8 @@ namespace Prueba4.Windows
         public Window2()
         {
             InitializeComponent();
-            
+
+            item7.Children.Add(new UserControl7());
 
 
         }

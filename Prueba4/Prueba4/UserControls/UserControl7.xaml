@@ -104,30 +104,31 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" CornerRadius="20" Margin="10" >
+                <Border Grid.Row="0" CornerRadius="20" Margin="10"  >
                     <Border.BorderBrush>
                         <SolidColorBrush Color="Black" />
                     </Border.BorderBrush>
                     <Border.Background>
-                        <SolidColorBrush Color="Cyan" />
+                        <SolidColorBrush Color="Transparent" />
                     </Border.Background>
 
 
+                    <lvc:PieChart LegendLocation="Bottom" Hoverable="False" Margin="-4"  >
+                        <lvc:PieChart.Series>
+                            <lvc:PieSeries Title="Victorias" Values="2" DataLabels="True"  Fill="{StaticResource color8}" />
+                            <lvc:PieSeries Title="Derrotas" Values="1" DataLabels="True"  Fill="{StaticResource color1}"/>
+
+                        </lvc:PieChart.Series>
+                    </lvc:PieChart>
 
 
 
-                    <StackPanel>
-                        <Grid Grid.Row="0" >
-                            <Label Content="RaTE" />
-                        </Grid>
-                        
-
-                    </StackPanel>
+                    
 
 
 
                 </Border>
-                <Border Grid.Row="01" CornerRadius="20" Margin="10" >
+                <Border Grid.Row="1" CornerRadius="20" Margin="10" >
                     <Border.BorderBrush>
                         <SolidColorBrush Color="Black" />
                     </Border.BorderBrush>

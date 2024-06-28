@@ -30,7 +30,7 @@
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0" >
 
-                    <GradientStop Color="#525252" Offset="0.55" />
+                    <GradientStop Color="{StaticResource primaryBackColor1}" Offset="0.55" />
                     <GradientStop Color="#414141" Offset="0" />
                 </LinearGradientBrush>
             </Border.Background>
@@ -43,26 +43,57 @@
                     <ColumnDefinition Width="250" />
 
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Name="ColC" Width="0" />
+                    <ColumnDefinition Name="ColC" Width="220" />
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="2">
 
                     <Grid.RowDefinitions>
-                        <RowDefinition />
+                        <RowDefinition Height="100" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" >
-                        <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource iconButton}"
-                                Tag="{StaticResource color5}"
-                                Click="Button_Click_1">       
-                            <faWPF:ImageAwesome Icon="Gear" Style="{StaticResource  iconI}"/>
 
-                        </Button>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Ellipse >
+                            </Ellipse>
+                            <TextBlock />
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                            <faWPF:ImageAwesome Icon="Gear" Style="{StaticResource  iconI}" Foreground="{StaticResource color1}"  Width="20" Height="20" Margin="10,2" />
+                            <TextBlock Text="Configuracion" 
+                                         Foreground="{StaticResource titleColor3}"
+                                         FontFamily="Montserrat"
+                                         FontSize="12"
+                                         VerticalAlignment="Center"/>
+
+                        </StackPanel>
+
+                        
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" >
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Ellipse >
+                            </Ellipse>
+                            <TextBlock />
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                            <CheckBox Style="{StaticResource  MaterialDesignSwitchToggleButton }" Margin="10" />
+                            <TextBlock Text="Modo Oscuro/Modo Claro" 
+                      Foreground="{StaticResource titleColor3}"
+                      FontFamily="Montserrat"
+                      FontSize="12"
+                      VerticalAlignment="Center"/>
+
+                        </StackPanel>
+
 
                     </StackPanel>
-                    
+
                 </Grid>
                 
 
@@ -108,7 +139,7 @@
                                  Tag="{StaticResource color1}"
                                  IsChecked="False"
                                  Command="{Binding ShowHomeViewCommand}" Checked="RadioButton_Checked_2">
-                            
+
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="Home" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"/>
@@ -154,19 +185,19 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource color1}"
-                                     Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked_3">   
+                                     Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked_3">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
 
+                        <TextBlock Text="READY IK" Margin="30,0,30,-240" Foreground="{StaticResource color1}" VerticalAlignment="Bottom" />
+
 
 
                     </StackPanel>
-
-
-
+                                      
 
                 </Border>
 
@@ -261,17 +292,13 @@
                                     FlowDirection="RightToLeft"
                                     VerticalAlignment="Center"
                                     Margin="0,0,10,0">
-                                <Button Style="{StaticResource Control}"
-                                    Tag="{StaticResource color1}">
-                                    <faWPF:ImageAwesome Icon="Bars"
-                                              Height="12" Width="12"
-                                              Style="{StaticResource ControlIcon}"/>
+                                <Button Style="{StaticResource iconButton}"
+                                        Tag="{StaticResource color5}"
+                                            Click="Button_Click">
+                                    <faWPF:ImageAwesome Icon="Gear" Style="{StaticResource  iconI}"/>
+
                                 </Button>
-                                <TextBlock Text="Welcome"
-                                       Foreground="{StaticResource titleColor3}"
-                                       FontFamily="Montserrat"
-                                       FontSize="12"
-                                       VerticalAlignment="Center"/>
+
                                 <Ellipse Height="35" Width="35"
                                      Stroke="{StaticResource color2}"
                                      StrokeThickness="2"
@@ -280,20 +307,20 @@
                                         <ImageBrush ImageSource="C:\img\Coche Azul.jpeg"/>
                                     </Ellipse.Fill>-->
                                 </Ellipse>
+                                <TextBlock Text="Bienvenido invocador"
+                                           Foreground="{StaticResource titleColor3}"
+                                           FontFamily="Montserrat"
+                                           FontSize="12"
+                                           VerticalAlignment="Center"/>
                                 <Button Style="{StaticResource iconButton}"
                                     Tag="{StaticResource color3}">
-                                    <faWPF:ImageAwesome Icon="LemonOutline" Style="{StaticResource  iconI}"/>
+                                    <faWPF:ImageAwesome Icon="Info" Style="{StaticResource  iconI}"/>
                                 </Button>
                                 <Button Style="{StaticResource iconButton}"
                                     Tag="{StaticResource color4}">
                                     <faWPF:ImageAwesome Icon="Envelope" Style="{StaticResource iconI}"/>
                                 </Button>
-                                <Button Style="{StaticResource iconButton}"
-                                    Tag="{StaticResource color5}"
-                                        Click="Button_Click">
-                                    <faWPF:ImageAwesome Icon="Gear" Style="{StaticResource  iconI}"/>
-                                    
-                                </Button>
+                                
                             </StackPanel>
 
                         </Grid>
