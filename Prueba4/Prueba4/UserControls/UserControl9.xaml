@@ -5,22 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Prueba4.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             Height="auto" Width="auto">
     <Grid >
 
-        <TextBox x:Name="TB_TEXT" 
-                 TextWrapping="Wrap" 
-                 Background="{StaticResource color1}" 
-                 Width="200" Height="200" 
-                 Margin="0,0,0,100" 
-                 Foreground="#EEEEEE"
-                 VerticalScrollBarVisibility="Auto"
-                 AcceptsReturn="True"/>
-        <Button Name="Freepire" Content="Documentar" Click="Freepire_Click" Margin="0,200,0,0" Width="200" Height="50"  Foreground="#EEEEEE"/>
-        <Button Name="Edit" Content="Editar Anterio"  Margin="320,0,0,250" Width="100" Height="50"  Foreground="#EEEEEE" />
-        <Button Name="NewP" Content="Nuevo Parra" Click="NewP_Click" Margin="320,0,0,110" Width="100" Height="50"  Foreground="#EEEEEE" />
-        <Button Name="Ejemp" Content="Ejemplo image" Click="Ejemp_Click"  Margin="320,0,0,-50" Width="100" Height="50"  Foreground="#EEEEEE" />
-        <Image Height="100" Width="100" Margin="0,0,400,90" Name="picturebox1" />
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button Name="Document" Content="Documentar" Click="Document_Click"  Foreground="{StaticResource MaterialDesignDarkBackground}"/>
+                <Button Name="NewT" Content="Titulo" Click="NewT_Click"   Foreground="{StaticResource MaterialDesignDarkBackground}" />
+                <Button Name="NewP" Content="Parrafo/s" Click="NewP_Click"    Foreground="{StaticResource MaterialDesignDarkBackground}" />
+                <Button Name="NewI" Content="Imagen nueva" Click="NewI_Click"     Foreground="{StaticResource MaterialDesignDarkBackground}" />
+                <Button Name="Star" Content="Iniciar Reporte"  Click="Star_Click"   Foreground="#EEEEEE" FontFamily="Montserrat" Background="{StaticResource color1}" Visibility="Collapsed" />
+                <Button Name="GuardaParras" Content="Guardar Parrafos" Click="GuardaParras_Click"   Foreground="{StaticResource MaterialDesignDarkBackground}" />
+                <Button x:Name="GuardarImg" Content="Guardar Imagenes" Click="GuardarImg_Click"    Foreground="{StaticResource MaterialDesignDarkBackground}" />
+
+
+
+            </StackPanel>
+
+            <TextBox x:Name="TB_TEXT" 
+          TextWrapping="Wrap" 
+          Background="{StaticResource color10}" 
+   
+          Foreground="#EEEEEE"
+          VerticalScrollBarVisibility="Auto"
+          AcceptsReturn="True"
+          Padding="20"/>
+          
+        </StackPanel>
+       
 
     </Grid>
 </UserControl>

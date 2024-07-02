@@ -43,11 +43,20 @@ namespace Prueba4.UserControls
     /// </summary>
     public partial class UserControl9 : System.Windows.Controls.UserControl
     {
-        private ObservableCollection<BitmapImage> listaDeImagenes = new ObservableCollection<BitmapImage>();
-        private List<string> Parra = new List<string>();
+
+        List<List<string>> ListRuts = new List<List<string>>();
+        List<List<string>> ListParras = new List<List<string>>();
+        List<List<string>> filasT = new List<List<string>>();
+
+
+        private List<string> parra = new List<string>();
         private List<string> rutas = new List<string>();
-        private List<string> Porros = new List<string>();
-        private List<string> column = new List<string>();
+        private List<string> titul = new List<string>();
+
+
+
+
+
 
 
 
@@ -55,23 +64,22 @@ namespace Prueba4.UserControls
         public UserControl9()
         {
             InitializeComponent();
-            
+
+            var si = "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\img\\TEst2.xlsx";
+
+            comvertir(si);
+
+
         }
 
 
-        private void Freepire_Click(object sender, RoutedEventArgs e)
+
+        private void Document_Click(object sender, RoutedEventArgs e)
         {
             string filePath = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Test.docx";
-            string Plantilla = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Plantilla.docx";
-            string IMge = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Coche negro.jpg";
+
             CreateDocumentsSpire_SDK();
-            //CreateWordDocument();
-            //CreateSimpleWordDocument(filePath);
-            //CreateWordDocument(filePath);
 
-            //CreateDocumentD(filePath);
-
-            //GenerarDocumentoDesdePlantilla( Plantilla , filePath, IMge);
             UpdateTableOfContents(filePath);
         }
 
@@ -79,143 +87,69 @@ namespace Prueba4.UserControls
         {
             string templatePath = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Plantilla.docx";
             string outputPath = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Test.docx";
-            string imagePath = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Coche negro.jpg";
+
 
             // Copiar el archivo de plantilla al archivo de salida
             System.IO.File.Copy(templatePath, outputPath, true);
 
-            // Abrir el documento con Open XML SDK
-            using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
+            
+            
+
+            for (int t = 0; t < titul.Count; t++)
             {
-                // Obtener el cuerpo del documento
-                DocumentFormat.OpenXml.Wordprocessing.Body body = wordDoc.MainDocumentPart.Document.Body;
+                int cont = ListParras.Count;
+                List<string> UseP = ListParras[t];
+                List<string> UseI = ListRuts[t];
 
-                // Crear un título de nivel 1
-                string titles = GetHeading1StyleId(templatePath);
-                DocumentFormat.OpenXml.Wordprocessing.Paragraph title = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text("Título")));
-                title.ParagraphProperties = new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties();
-                title.ParagraphProperties.ParagraphStyleId = new ParagraphStyleId() { Val = titles };
-                body.AppendChild(title);
 
-                // Insertar párrafos
-                for (int i = 0; i < Parra.Count; i++)
+                inserTitulo(outputPath, titul[t], templatePath);
+                //Inserta Titulo con nivel 1
+                using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
                 {
-                    DocumentFormat.OpenXml.Wordprocessing.Paragraph para = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
-                    DocumentFormat.OpenXml.Wordprocessing.Run run1 = new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(Parra[i]));
-                    para.Append(run1);
+                    // Obtener el cuerpo del documento
+                    DocumentFormat.OpenXml.Wordprocessing.Body body = wordDoc.MainDocumentPart.Document.Body;
 
-                    para.ParagraphProperties = new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties(
-                        new ParagraphBorders(),
-                        new DocumentFormat.OpenXml.Wordprocessing.Justification() { Val = DocumentFormat.OpenXml.Wordprocessing.JustificationValues.Left }, // Alineación izquierda
-                        new Indentation()
-                        {
-                            Left = "720",  // Márgen izquierdo en puntos (1 pulgada = 72 puntos)
-                        }
-                    );
+                    // Crear un título de nivel 1
+                    string titles = GetHeading1StyleId(templatePath);
+                    DocumentFormat.OpenXml.Wordprocessing.Paragraph title = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(titul[t])));
+                    title.ParagraphProperties = new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties();
+                    title.ParagraphProperties.ParagraphStyleId = new ParagraphStyleId() { Val = titles };
+                    body.AppendChild(title);
 
-                    body.AppendChild(para);
+                    DocumentFormat.OpenXml.Wordprocessing.Paragraph jum = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
 
-                    DocumentFormat.OpenXml.Wordprocessing.Paragraph air = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
-                    DocumentFormat.OpenXml.Wordprocessing.Run run3 = new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(""));
-                    air.Append(run3);
 
-                    body.AppendChild(air);
+                    DocumentFormat.OpenXml.Wordprocessing.Run ru = new DocumentFormat.OpenXml.Wordprocessing.Run();
+                    ru.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.Break() { Type = BreakValues.Page });
+                    jum.AppendChild(ru);
+
+                    body.AppendChild(jum);
+
+
                 }
 
-                #region
-                // Insertar tabla
-                //DocumentFormat.OpenXml.Wordprocessing.Table table = new DocumentFormat.OpenXml.Wordprocessing.Table();
-                //TableProperties tableProperties = new TableProperties(
-                //    new TableJustification() { Val = TableRowAlignmentValues.Center },
-
-                //               new TableBorders(
-                //               new DocumentFormat.OpenXml.Wordprocessing.TopBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 8 },
-                //               new DocumentFormat.OpenXml.Wordprocessing.BottomBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 8 },
-                //               new DocumentFormat.OpenXml.Wordprocessing.LeftBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 8 },
-                //               new DocumentFormat.OpenXml.Wordprocessing.RightBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 8 },
-                //               new InsideHorizontalBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 2 },
-                //               new InsideVerticalBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 0 }
-                //                               ));
-
-                //table.AppendChild(tableProperties);
-
-                //// Crear una fila (encabezado)
-                //DocumentFormat.OpenXml.Wordprocessing.TableRow headerRow = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
-
-                //// Crear celdas para el encabezado
-                //headerRow.Append(CreateHeaderCell("ID"));
-                //headerRow.Append(CreateHeaderCell("Nombre"));
 
 
-                //// Agregar las celdas al encabezado
-
-
-
-                //// Agregar la fila de encabezado a la tabla
-                //table.Append(headerRow);
-
-                //// Crear filas de datos
-                //DocumentFormat.OpenXml.Wordprocessing.TableRow dataRow1 = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
-                //DocumentFormat.OpenXml.Wordprocessing.TableCell dataCell1 = CreateTableCellWithText("Dato 1");
-                //DocumentFormat.OpenXml.Wordprocessing.TableCell dataCell2 = CreateTableCellWithText("Dato 2");
-                //dataRow1.Append(dataCell1, dataCell2);
-
-                //DocumentFormat.OpenXml.Wordprocessing.TableRow dataRow2 = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
-                //DocumentFormat.OpenXml.Wordprocessing.TableCell dataCell3 = new DocumentFormat.OpenXml.Wordprocessing.TableCell(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text("Celda 2"))));
-                //DocumentFormat.OpenXml.Wordprocessing.TableCell dataCell4 = new DocumentFormat.OpenXml.Wordprocessing.TableCell(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text("Celda 2"))));
-                //dataRow2.Append(dataCell3, dataCell4);
-
-                //// Agregar filas de datos a la tabla
-                //table.Append(dataRow1, dataRow2);
-
-                //// Agregar la tabla al cuerpo del documento
-                //body.AppendChild(table);
-                #endregion
-            }
-
-            using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
-            {
-                MainDocumentPart mainPart = wordDoc.MainDocumentPart;
-                DocumentFormat.OpenXml.Wordprocessing.Body body = mainPart.Document.Body;
-
-                // Crear una tabla
-                DocumentFormat.OpenXml.Wordprocessing.Table table = new DocumentFormat.OpenXml.Wordprocessing.Table();
-
-                // Obtener el estilo de tabla de la plantilla
-
-                //if (!string.IsNullOrEmpty(tableStyleId))
-                //{
-                    table.AppendChild(new TableProperties(new DocumentFormat.OpenXml.Wordprocessing.TableStyle() { Val = "Tablaconcuadrcula4-nfasis5" }));
-
-                DocumentFormat.OpenXml.Wordprocessing.TableRow headerRow = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
-                headerRow.TableRowProperties = new TableRowProperties(new TableHeader(),
-                                        new TableLook() { FirstRow = true } // Esto marca la primera fila como encabezado
-);
-                for (int c = 0; c < 3; c++)
+                for (int c = 0; c < cont; c++)
                 {
-                    DocumentFormat.OpenXml.Wordprocessing.TableCell tc = new DocumentFormat.OpenXml.Wordprocessing.TableCell(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text($"Encabezado {c + 1}"))));
-                    tc.TableCellProperties = new TableCellProperties(new TableCellWidth { Type = TableWidthUnitValues.Dxa, Width = "2400" });
-                    headerRow.Append(tc);
-                }
-                table.Append(headerRow);
 
-                // Crear las filas de datos
-                for (int r = 0; r < 3; r++)
-                {
-                    DocumentFormat.OpenXml.Wordprocessing.TableRow tr = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
-                    for (int c = 0; c < 3; c++)
+                    //insertar parrafos
+                    inserParra(outputPath, UseP[c]);
+
+
+                    //insertar tablas
+
+                    if (UseI[c] == "X")
                     {
-                        DocumentFormat.OpenXml.Wordprocessing.TableCell tc = new DocumentFormat.OpenXml.Wordprocessing.TableCell(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text($"Fila {r + 1}, Columna {c + 1}"))));
-                        tr.Append(tc);
+                        // Insertar imagen con NPOI
+                        InsertImageNPOI(outputPath, UseI[c]);
                     }
-                    table.Append(tr);
+
+                   
                 }
-                body.Append(table);
-            }
-
-            // Insertar imagen con NPOI
-            InsertImageNPOI(outputPath, imagePath);
-
+            }                 
+            
+            #region
             using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
             {
 
@@ -295,7 +229,8 @@ namespace Prueba4.UserControls
                     Console.WriteLine("No se encontraron definiciones de estilo en la plantilla.");
                 }
             }
-        
+            #endregion
+
 
             #region
 
@@ -338,49 +273,130 @@ namespace Prueba4.UserControls
             //}
             #endregion
             // Guardar el documento final
-            // No necesitas abrir el documento nuevamente, solo guardarlo
-            // usando la misma instancia wordDoc que ya tienes abierta
             using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
             {
                 wordDoc.MainDocumentPart.Document.Save();
             }
         }
 
-        static DocumentFormat.OpenXml.Wordprocessing.TableCell CreateHeaderCell(string text)
-        {
-            DocumentFormat.OpenXml.Wordprocessing.TableCell cell = new DocumentFormat.OpenXml.Wordprocessing.TableCell(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(text))));
-            TableCellProperties cellProperties = new TableCellProperties(new TableCellWidth { Type = TableWidthUnitValues.Auto });
-            cellProperties.Append(new DocumentFormat.OpenXml.Wordprocessing.Shading() { Fill = "A9D08E" }); // Ejemplo: color de fondo verde claro
-            cell.Append(cellProperties);
-            return cell;
-        }
 
-        static string GetTableStyleId(MainDocumentPart mainPart)
+
+        private void inserTitulo(string outputPath, string til,string templatePath )
         {
-            // Buscar el estilo de tabla predeterminado en la plantilla
-            StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;
-            if (stylePart != null)
+            using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
             {
-                DocumentFormat.OpenXml.Wordprocessing.Style tableStyle = stylePart.Styles.Descendants<DocumentFormat.OpenXml.Wordprocessing.Style>()
-                    .FirstOrDefault(s => s.Type == DocumentFormat.OpenXml.Wordprocessing.StyleValues.Table && s.Default == OnOffValue.FromBoolean(true));
+                // Obtener el cuerpo del documento
+                DocumentFormat.OpenXml.Wordprocessing.Body body = wordDoc.MainDocumentPart.Document.Body;
 
-                if (tableStyle != null)
-                {
-                    return tableStyle.StyleId;
-                }
+                // Crear un título de nivel 1
+                string titles = GetHeading1StyleId(templatePath);
+                DocumentFormat.OpenXml.Wordprocessing.Paragraph title = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(til)));
+                title.ParagraphProperties = new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties();
+                title.ParagraphProperties.ParagraphStyleId = new ParagraphStyleId() { Val = titles };
+                body.AppendChild(title);
+
+                DocumentFormat.OpenXml.Wordprocessing.Paragraph jum = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
+
+
+                DocumentFormat.OpenXml.Wordprocessing.Run ru = new DocumentFormat.OpenXml.Wordprocessing.Run();
+                ru.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.Break() { Type = BreakValues.Page });
+                jum.AppendChild(ru);
+
+                body.AppendChild(jum);
+
+
             }
-            return null;
+        }
+
+
+        private void inserTable(string outputPath)
+        {
+            using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
+            {
+                MainDocumentPart mainPart = wordDoc.MainDocumentPart;
+                DocumentFormat.OpenXml.Wordprocessing.Body body = mainPart.Document.Body;
+
+
+                int countC = filasT[0].Count;
+
+
+                // Crear una tabla
+                DocumentFormat.OpenXml.Wordprocessing.Table table = new DocumentFormat.OpenXml.Wordprocessing.Table();
+
+                table.AppendChild(new TableProperties(new DocumentFormat.OpenXml.Wordprocessing.TableStyle() { Val = "Tablaconcuadrcula4-nfasis5" }));
+
+                int contC = filasT[0].Count;
+                int contD = filasT.Count;
+
+                // Crear las filas de datos
+                for (int k = 0; k < contD; k++)
+                {
+
+                    var UseT = filasT[k];
+
+                    DocumentFormat.OpenXml.Wordprocessing.TableRow tr = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
+                    for (int j = 0; j < contC; j++)
+                    {
+                        DocumentFormat.OpenXml.Wordprocessing.TableCell lc = new DocumentFormat.OpenXml.Wordprocessing.TableCell(
+                            new DocumentFormat.OpenXml.Wordprocessing.Paragraph(
+                                new DocumentFormat.OpenXml.Wordprocessing.Run(
+                                    new DocumentFormat.OpenXml.Wordprocessing.Text(UseT[j])
+                                )
+                            )
+                        );
+
+                        tr.Append(lc);
+                    }
+                    table.Append(tr);
+                }
+
+                // Añadir la tabla al cuerpo del documento
+                body.Append(table);
+
+                // Añadir un salto de página
+                DocumentFormat.OpenXml.Wordprocessing.Paragraph jum = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
+                DocumentFormat.OpenXml.Wordprocessing.Run ru = new DocumentFormat.OpenXml.Wordprocessing.Run();
+                ru.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.Break() { Type = BreakValues.Page });
+                jum.AppendChild(ru);
+
+                body.AppendChild(jum);
+            }
+
         }
 
 
 
-
-
-
-        static DocumentFormat.OpenXml.Wordprocessing.TableCell CreateTableCell(string text)
+        private void inserParra(string outputPath,string par)
         {
-            DocumentFormat.OpenXml.Wordprocessing.TableCell cell = new DocumentFormat.OpenXml.Wordprocessing.TableCell(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(text))));
-            return cell;
+            using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
+            {
+                // Obtener el cuerpo del documento
+                DocumentFormat.OpenXml.Wordprocessing.Body body = wordDoc.MainDocumentPart.Document.Body;
+
+                // Insertar párrafos
+                DocumentFormat.OpenXml.Wordprocessing.Paragraph para = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
+                DocumentFormat.OpenXml.Wordprocessing.Run run1 = new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(par));
+                para.Append(run1);
+
+                para.ParagraphProperties = new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties(
+                    new ParagraphBorders(),
+                    new DocumentFormat.OpenXml.Wordprocessing.Justification() { Val = DocumentFormat.OpenXml.Wordprocessing.JustificationValues.Left }, // Alineación izquierda
+                    new Indentation()
+                    {
+                        Left = "720",  // Márgen izquierdo en puntos (1 pulgada = 72 puntos)
+                    }
+                );
+
+                body.AppendChild(para);
+
+                DocumentFormat.OpenXml.Wordprocessing.Paragraph air = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
+                DocumentFormat.OpenXml.Wordprocessing.Run run3 = new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(""));
+                air.Append(run3);
+
+                body.AppendChild(air);
+
+
+            }
         }
 
         static void InsertImageNPOI(string outputPath, string imagePath)
@@ -396,7 +412,7 @@ namespace Prueba4.UserControls
                     XWPFParagraph para = doc.CreateParagraph();
                     para.Alignment = ParagraphAlignment.CENTER;
                     XWPFRun run = para.CreateRun();
-                    run.AddPicture(pic, (int)PictureType.PNG, "imagen.png" ,Units.ToEMU(300), Units.ToEMU(200));
+                    run.AddPicture(pic, (int)PictureType.PNG, "imagen.png", Units.ToEMU(300), Units.ToEMU(200));
                 }
 
                 // Guardar el documento de Word con la imagen insertada
@@ -406,7 +422,6 @@ namespace Prueba4.UserControls
                 }
             }
         }
-
 
 
         private static string GetHeading1StyleId(string templatePath)
@@ -435,9 +450,27 @@ namespace Prueba4.UserControls
             // Guardar los cambios
             document.SaveToFile(docPath, FileFormat.Docx);
         }
-        
 
-        private void Ejemp_Click(object sender, RoutedEventArgs e)
+
+        private void NewP_Click(object sender, RoutedEventArgs e)
+        {
+            parra.Add(TB_TEXT.Text);
+
+            if(rutas.Count < 0 & rutas.Count < parra.Count)
+            {
+                rutas.Add("X");
+            }
+
+
+        }
+
+
+        private void NewT_Click(object sender, RoutedEventArgs e)
+        {
+            titul.Add(TB_TEXT.Text);
+        }
+
+        private void NewI_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
@@ -452,71 +485,64 @@ namespace Prueba4.UserControls
 
 
 
+        }
+
+        private void Star_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 
-        private void NewP_Click(object sender, RoutedEventArgs e)
+        private void GuardaParras_Click(object sender, RoutedEventArgs e)
         {
-            Parra.Add(TB_TEXT.Text);
-
-
+            ListParras.Add(parra);
         }
 
-
-
-
-
-
-        private List<string> CargarDatosDesdeExcel()
+        private void GuardarImg_Click(object sender, RoutedEventArgs e)
         {
-            string celda;
+            ListRuts.Add(rutas);
+        }
 
-            // Ruta de tu archivo Excel
-            string filePath = "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\img\\TEst2.xlsx";
+        private void comvertir(string filtRuh)
+        {
 
-            // Cargar el archivo Excel usando ClosedXML
-            using (XLWorkbook workbook = new XLWorkbook(filePath))
+
+            
+
+            
+            using (var workbook = new XLWorkbook(filtRuh))
             {
-                // Selecciona la hoja que quieres leer (por ejemplo, la primera hoja)
-                IXLWorksheet worksheet = workbook.Worksheet(1);
+                var worksheet = workbook.Worksheet("Hoja1");
+                var usedRange = worksheet.RangeUsed();
+                var ContR = usedRange.RowCount();
 
 
-
-                // Asumiendo que la primera fila es la cabecera
-                bool firstRow = true;
-                foreach (IXLRow row in worksheet.Rows())
+                for (int i = 0; i < ContR; i++)
                 {
-                    // Agrega las columnas al DataTable
-                    if (firstRow)
-                    {
-                        foreach (IXLCell cell in row.Cells())
-                        {
-                            cell.Value.ToString();
-                        }
-                        firstRow = false;
 
-                    }
-                    if (!firstRow)
-                    {
-                        foreach (IXLCell cell in row.Cells())
-                        {
-                            cell.Value.ToString();
+                    var row = worksheet.Row(i+1);
 
-                        }
-                        // Agrega filas al DataTable
+                    var rowE = new List<string>();
+                    foreach (var cell in row.Cells())
+                    {
+                        rowE.Add(cell.GetValue<string>());
+                         filasT.Add(rowE);
 
                     }
                 }
+                    
 
-                return Porros;
-
+               
+               
             }
+
+
+
         }
+
+
+
 
 
 
     }
 }
-
-
-

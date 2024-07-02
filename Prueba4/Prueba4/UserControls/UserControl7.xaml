@@ -132,7 +132,7 @@
                     <SolidColorBrush Color="Black" />
                 </Border.BorderBrush>
                 <Border.Background>
-                    <ImageBrush ImageSource="C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\img\V6KSP6ZEUNGXBPZRBJTR25ZFIM.jpg" />
+                    <ImageBrush ImageSource="C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\V6KSP6ZEUNGXBPZRBJTR25ZFIM.jpg" />
                 </Border.Background>
 
                 <Grid>
