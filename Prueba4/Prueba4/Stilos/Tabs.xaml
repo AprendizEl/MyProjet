@@ -18,7 +18,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <TabPanel Grid.Row="0" IsItemsHost="True" Background="Transparent" />
-                        <Border Grid.Row="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                        <Border Grid.Row="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
                             <ContentPresenter ContentSource="SelectedContent" />
                         </Border>
                     </Grid>
@@ -30,12 +30,12 @@
     <!-- TabItem Style -->
     <Style x:Key="TabI1" TargetType="TabItem">
         <Setter Property="Padding" Value="10,5"/>
-        <Setter Property="Margin" Value="2,0"/>
+        <Setter Property="Margin" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TabItem">
                     <Grid>
-                        <Border x:Name="Border" Background="Transparent" BorderBrush="Transparent" BorderThickness="0,0,0,2" CornerRadius="10,10,0,0" Padding="10,5">
+                        <Border x:Name="Border" Background="Transparent" BorderBrush="Transparent" BorderThickness="0,0,0,2" CornerRadius="14,0,0,0" Padding="10,5">
                             <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" />
                         </Border>
                     </Grid>
@@ -61,4 +61,73 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+    <Style x:Key="TabI2" TargetType="TabItem">
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Grid>
+                        <Border x:Name="Border" Background="Transparent" BorderBrush="Transparent" BorderThickness="0,0,0,2" CornerRadius="0,0,0,0" Padding="10,5">
+                            <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#FF3A75C4" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF3A75C4" />
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Gray"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#FFB0C4DE" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="Gray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TabI3" TargetType="TabItem">
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Grid>
+                        <Border x:Name="Border" Background="Transparent" BorderBrush="Transparent" BorderThickness="0,0,0,2" CornerRadius="0,14,0,0" Padding="10,5">
+                            <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#FF3A75C4" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF3A75C4" />
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Gray"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#FFB0C4DE" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="Gray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

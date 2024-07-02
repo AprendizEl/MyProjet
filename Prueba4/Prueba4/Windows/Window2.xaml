@@ -43,7 +43,7 @@
                     <ColumnDefinition Width="250" />
 
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Name="ColC" Width="220" />
+                    <ColumnDefinition Name="ColC" Width="0" />
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="2">

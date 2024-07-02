@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LiveCharts.Wpf;
 using LiveCharts;
+using Spire.Doc.Fields.Shapes.Charts;
 
 namespace Prueba4.UserControls
 {
@@ -22,7 +23,9 @@ namespace Prueba4.UserControls
     /// </summary>
     public partial class UserControl7 : UserControl
     {
-        
+        public SeriesCollection ChartBar { get; set; }
+        public List<string> LaBar { get; set; }
+
         List<int> listx = new List<int>();
         List<int> listy = new List<int>();
         List<Escaleras> obj = new List<Escaleras>();
@@ -58,10 +61,25 @@ namespace Prueba4.UserControls
             YFormatter = value => value.ToString("N");
 
             // Establecer el contexto de datos
-            Grafic1.DataContext = this;
 
-        
+
+            ChartBar = new SeriesCollection
+            {
+                new RowSeries
+                {
+                    Title = "Fiddlesticks",
+                    Values = new ChartValues<double> { 4, 6, 2},
+                    Fill = new SolidColorBrush(Color.FromArgb(50, 100, 255, 100))
+ 
+                }
+            };
+
+            LaBar = new List<string> { "K", "D", "A" };
+
+            Grafic1.DataContext = this;
+            Grafic2.DataContext = this;
         }
+    
 
 
         private void relleo()

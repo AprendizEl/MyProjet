@@ -30,10 +30,59 @@
                 </Border.BorderBrush>
 
                 <Border.Background>
-                    <SolidColorBrush Color="Aqua"/>
+                    <SolidColorBrush Color="{StaticResource winBorderColor1}"/>
                 </Border.Background>
 
+
+
                 <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" >
+                        <Label Content="hola" VerticalAlignment="Center" Foreground="White" FontFamily="Montserrat"  HorizontalAlignment="Center" FontSize="17" />
+                    </Grid>
+
+                    <Border Grid.Row="1"  CornerRadius="10" Margin="10"  >
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="Aqua" />
+                        </Border.BorderBrush>
+
+                        <Border.Background>
+                            <SolidColorBrush Color="{StaticResource winBorderColor2}"/>
+                        </Border.Background>
+
+                        <ListBox >
+                            <ListBoxItem>
+
+                                <Grid Grid.Row="1"  VerticalAlignment="Bottom" >
+                                    <Label Content="Fiddlestick" Foreground="White" ForceCursor="True" />
+                                </Grid>
+
+                            </ListBoxItem>
+                            <ListBoxItem Content="hola" />
+                            <ListBoxItem Content="hola" />
+                            <ListBoxItem Content="hola" />
+                            <ListBoxItem Content="hola" />
+
+
+                        </ListBox >
+
+
+                    </Border>
+
+                </Grid>
+
+               
+
+
+
+            </Border>
+
+                <!--<Grid>
                     <StackPanel Orientation="Vertical" Margin="10,30" >
 
                         <Border  BorderThickness="0,0,0,2" Margin="-10,-30,-10,0">
@@ -51,7 +100,7 @@
                                     <SolidColorBrush Color="Transparent" />
                                 </Border.BorderBrush>
                                 <Border.Background>
-                                    <SolidColorBrush Color="AliceBlue" />
+                                    <ImageBrush ImageSource="C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\img\Coche Azul.jpeg" />
                                 </Border.Background>
 
                                 <TextBlock Text="HOLAAAA" Margin="10,10" />
@@ -76,22 +125,38 @@
 
 
 
-                </Grid>
+                </Grid>-->
 
-            </Border>
-
-
-
-            <Border Grid.Column="1" CornerRadius="20" Margin="10" >
+            <Border Grid.Column="1" CornerRadius="20" Margin="10"  BorderThickness="2" Padding="5" >
                 <Border.BorderBrush>
                     <SolidColorBrush Color="Black" />
                 </Border.BorderBrush>
                 <Border.Background>
-                    <SolidColorBrush Color="Cyan" />
+                    <ImageBrush ImageSource="C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\img\V6KSP6ZEUNGXBPZRBJTR25ZFIM.jpg" />
                 </Border.Background>
 
                 <Grid>
-                    <Label Content="Champs" />
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" VerticalAlignment="Stretch" >
+
+                        <Label Content="Fiddlesticks" FontFamily="Montserrat" FontSize="30" Margin="10" Foreground="{StaticResource color2}" FontWeight="Medium" />
+
+                    </Grid>
+
+
+                    <Grid Grid.Row="1" VerticalAlignment="Stretch"  >
+                        <lvc:CartesianChart Series="{Binding ChartBar}" LegendLocation="Right" Name="Grafic2" Foreground="{StaticResource color2}"  >
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis Labels="{Binding LaBar}" Foreground="{StaticResource color2}" />
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+                    </Grid>
+
+
                 </Grid>
                 
             </Border>
@@ -104,7 +169,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" CornerRadius="20" Margin="10"  >
+                <Border Grid.Row="0" CornerRadius="20" Margin="10" >
                     <Border.BorderBrush>
                         <SolidColorBrush Color="Black" />
                     </Border.BorderBrush>
@@ -115,15 +180,17 @@
 
                     <lvc:PieChart LegendLocation="Bottom" Hoverable="False" Margin="-4"  >
                         <lvc:PieChart.Series>
-                            <lvc:PieSeries Title="Victorias" Values="2" DataLabels="True"  Fill="{StaticResource color8}" />
-                            <lvc:PieSeries Title="Derrotas" Values="1" DataLabels="True"  Fill="{StaticResource color1}"/>
+                            <lvc:PieSeries Title="Victorias" Values="2" DataLabels="True" Opacity="0.5" Fill="{StaticResource color1}" />
+                            <lvc:PieSeries Title="Derrotas" Values="1" DataLabels="True" Opacity="0.5"    Fill="{StaticResource color7}"/>
 
                         </lvc:PieChart.Series>
                     </lvc:PieChart>
 
-
-
                     
+
+
+
+
 
 
 
@@ -133,21 +200,22 @@
                         <SolidColorBrush Color="Black" />
                     </Border.BorderBrush>
                     <Border.Background>
-                        <SolidColorBrush Color="Cyan" />
+                        <SolidColorBrush Color="{StaticResource winBorderColor1}" />
                     </Border.Background>
 
 
 
 
 
-                    <StackPanel>
-                        <Grid Grid.Row="0" >
-                            <Label Content="Champ" />
-                        </Grid>
-                      
+
+                        <!--<Grid Grid.Row="0" >
+                            <Label Content="Champi" />
+                        </Grid>-->
+                        
 
 
-                    </StackPanel>
+
+
 
 
 
@@ -168,7 +236,7 @@
 
             <Grid Grid.Column="0" Margin="10">
                 <TabControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Style="{StaticResource TabC1}" Background="Black" >
-                    <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
+                    <TabItem Header="KILLS" Style="{StaticResource TabI1}" >
                         <lvc:CartesianChart Grid.Row="1" Name="Grafic1" Series="{Binding SeriesCollection}" Height="150">
                             <lvc:CartesianChart.AxisX>
                                 <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
@@ -178,7 +246,7 @@
                             </lvc:CartesianChart.AxisY>
                         </lvc:CartesianChart>
                     </TabItem>
-                    <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
+                    <TabItem Header="DEATH" Style="{StaticResource TabI2}" >
                         <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
                             <lvc:CartesianChart.AxisX>
                                 <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
@@ -188,7 +256,7 @@
                             </lvc:CartesianChart.AxisY>
                         </lvc:CartesianChart>
                     </TabItem>
-                    <TabItem Header="TabItem" Style="{StaticResource TabI1}" >
+                    <TabItem Header="ASSIST" Style="{StaticResource TabI3}" >
                         <lvc:CartesianChart Grid.Row="1" Series="{Binding SeriesCollection}" Height="150">
                             <lvc:CartesianChart.AxisX>
                                 <lvc:Axis Title="X Axis" Labels="{Binding Labels}"/>
