@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol9.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\prueba4\\usercontrols\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\prueba4\\usercontrols\\usercontrol1.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol1.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\prueba4\\usercontrols\\usercontrol9.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol9.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\prueba4\\usercontrols\\usercontrol1.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol1.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\prueba4\\usercontrols\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl9.xaml.cs",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl9.xaml.cs",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl9.xaml.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAD4v10AAAAAAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAMwIYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T12:19:04.566Z",
               "EditorCaption": ""
@@ -50,30 +50,33 @@
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl9.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl9.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-25T12:18:58.766Z"
+              "WhenOpened": "2024-06-25T12:18:58.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UserControl1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl1.xaml.cs",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl1.xaml.cs",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl1.xaml.cs",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl1.xaml.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAiwD0AAABFAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwCsAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T19:57:49.728Z"
+              "WhenOpened": "2024-06-26T19:57:49.728Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserControl1.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl1.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl1.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl1.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-26T19:49:43.27Z"
+              "WhenOpened": "2024-06-26T19:49:43.27Z",
+              "EditorCaption": ""
             }
           ]
         }

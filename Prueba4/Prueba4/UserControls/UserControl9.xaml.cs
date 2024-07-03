@@ -47,12 +47,21 @@ namespace Prueba4.UserControls
         List<List<string>> ListRuts = new List<List<string>>();
         List<List<string>> ListParras = new List<List<string>>();
         List<List<string>> filasT = new List<List<string>>();
+        List<List<string>> ListaTabla = new List<List<string>>();
 
 
         private List<string> parra = new List<string>();
         private List<string> rutas = new List<string>();
         private List<string> titul = new List<string>();
+        private List<string> rtablas = new List<string>();
+        private bool Simg = false;
+        private int Pimg = 0;
+        private int Ptable = 0;
 
+
+
+
+        string si = "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\img\\Libro1.xlsx";
 
 
 
@@ -65,22 +74,22 @@ namespace Prueba4.UserControls
         {
             InitializeComponent();
 
-            var si = "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\img\\TEst2.xlsx";
+           
 
-            comvertir(si);
+           
 
 
         }
 
-
+       
 
         private void Document_Click(object sender, RoutedEventArgs e)
         {
-            string filePath = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Test.docx";
+
 
             CreateDocumentsSpire_SDK();
 
-            UpdateTableOfContents(filePath);
+
         }
 
         private void CreateDocumentsSpire_SDK()
@@ -97,38 +106,15 @@ namespace Prueba4.UserControls
 
             for (int t = 0; t < titul.Count; t++)
             {
-                int cont = ListParras.Count;
+                int cont = ListParras[t].Count;
                 List<string> UseP = ListParras[t];
                 List<string> UseI = ListRuts[t];
+                List<string> UseT = ListaTabla[t];
 
 
-                inserTitulo(outputPath, titul[t], templatePath);
                 //Inserta Titulo con nivel 1
-                using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
-                {
-                    // Obtener el cuerpo del documento
-                    DocumentFormat.OpenXml.Wordprocessing.Body body = wordDoc.MainDocumentPart.Document.Body;
-
-                    // Crear un título de nivel 1
-                    string titles = GetHeading1StyleId(templatePath);
-                    DocumentFormat.OpenXml.Wordprocessing.Paragraph title = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(titul[t])));
-                    title.ParagraphProperties = new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties();
-                    title.ParagraphProperties.ParagraphStyleId = new ParagraphStyleId() { Val = titles };
-                    body.AppendChild(title);
-
-                    DocumentFormat.OpenXml.Wordprocessing.Paragraph jum = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
-
-
-                    DocumentFormat.OpenXml.Wordprocessing.Run ru = new DocumentFormat.OpenXml.Wordprocessing.Run();
-                    ru.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.Break() { Type = BreakValues.Page });
-                    jum.AppendChild(ru);
-
-                    body.AppendChild(jum);
-
-
-                }
-
-
+                inserTitulo(outputPath, titul[t], templatePath);
+                
 
                 for (int c = 0; c < cont; c++)
                 {
@@ -139,13 +125,16 @@ namespace Prueba4.UserControls
 
                     //insertar tablas
 
-                    if (UseI[c] == "X")
+                    if (UseI[c] != "X")
                     {
                         // Insertar imagen con NPOI
-                        InsertImageNPOI(outputPath, UseI[c]);
+                        InsertImageNPOI(outputPath, UseI[c], 300 , 200);
                     }
 
-                   
+                    //inserTable(outputPath);
+                    inserTable(outputPath , UseT[c]);
+
+
                 }
             }                 
             
@@ -288,8 +277,18 @@ namespace Prueba4.UserControls
                 // Obtener el cuerpo del documento
                 DocumentFormat.OpenXml.Wordprocessing.Body body = wordDoc.MainDocumentPart.Document.Body;
 
+                for(int i = 0; i < 15; i++)
+                {
+                    DocumentFormat.OpenXml.Wordprocessing.Paragraph air = new DocumentFormat.OpenXml.Wordprocessing.Paragraph();
+                    DocumentFormat.OpenXml.Wordprocessing.Run run3 = new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(""));
+                    air.Append(run3);
+
+                    body.AppendChild(air);
+                }
+                
+
                 // Crear un título de nivel 1
-                string titles = GetHeading1StyleId(templatePath);
+                string titles =GetHeading1StyleId(templatePath);
                 DocumentFormat.OpenXml.Wordprocessing.Paragraph title = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(til)));
                 title.ParagraphProperties = new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties();
                 title.ParagraphProperties.ParagraphStyleId = new ParagraphStyleId() { Val = titles };
@@ -309,8 +308,9 @@ namespace Prueba4.UserControls
         }
 
 
-        private void inserTable(string outputPath)
+        private void inserTable(string outputPath, string tab)
         {
+            comvertir(tab);
             using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
             {
                 MainDocumentPart mainPart = wordDoc.MainDocumentPart;
@@ -322,7 +322,6 @@ namespace Prueba4.UserControls
 
                 // Crear una tabla
                 DocumentFormat.OpenXml.Wordprocessing.Table table = new DocumentFormat.OpenXml.Wordprocessing.Table();
-
                 table.AppendChild(new TableProperties(new DocumentFormat.OpenXml.Wordprocessing.TableStyle() { Val = "Tablaconcuadrcula4-nfasis5" }));
 
                 int contC = filasT[0].Count;
@@ -399,7 +398,7 @@ namespace Prueba4.UserControls
             }
         }
 
-        static void InsertImageNPOI(string outputPath, string imagePath)
+        static void InsertImageNPOI(string outputPath, string imagePath, int w, int h)
         {
             // Cargar el documento creado con Open XML SDK utilizando NPOI
             using (FileStream fs = new FileStream(outputPath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
@@ -412,7 +411,7 @@ namespace Prueba4.UserControls
                     XWPFParagraph para = doc.CreateParagraph();
                     para.Alignment = ParagraphAlignment.CENTER;
                     XWPFRun run = para.CreateRun();
-                    run.AddPicture(pic, (int)PictureType.PNG, "imagen.png", Units.ToEMU(300), Units.ToEMU(200));
+                    run.AddPicture(pic, (int)PictureType.PNG, "imagen.png", Units.ToEMU(w), Units.ToEMU(h));
                 }
 
                 // Guardar el documento de Word con la imagen insertada
@@ -438,32 +437,23 @@ namespace Prueba4.UserControls
             }
         }
 
-        private static void UpdateTableOfContents(string docPath)
-        {
-            // Abrir el documento con Spire.Doc
-            Spire.Doc.Document document = new Spire.Doc.Document();
-            document.LoadFromFile(docPath);
-
-            // Actualizar la tabla de contenidos
-            document.UpdateTableOfContents();
-
-            // Guardar los cambios
-            document.SaveToFile(docPath, FileFormat.Docx);
-        }
 
 
         private void NewP_Click(object sender, RoutedEventArgs e)
         {
             parra.Add(TB_TEXT.Text);
 
-            if(rutas.Count < 0 & rutas.Count < parra.Count)
-            {
-                rutas.Add("X");
-            }
+
+            bool veri = VerificacionI(rutas);
+
+
+       
+            rutas.Add("X");
+
+    
 
 
         }
-
 
         private void NewT_Click(object sender, RoutedEventArgs e)
         {
@@ -480,7 +470,28 @@ namespace Prueba4.UserControls
             {
                 // Crear una nueva BitmapImage desde el archivo seleccionado
                 string rutaArchivo = openFileDialog.FileName;
+
+
                 rutas.Add(rutaArchivo);
+                int c = rutas.Count;
+                int a = parra.Count;
+                if (c > a)
+                {
+                    rutas[c - 2] = rutaArchivo;
+                    rutas.Remove(rutas.Last());
+                }
+
+            }
+
+
+            
+
+            bool veri = VerificacionI(rutas);
+
+            if (veri == false)
+            {
+                rutas.Add("X");
+                Pimg = rutas.Count;
             }
 
 
@@ -494,19 +505,20 @@ namespace Prueba4.UserControls
 
         private void GuardaParras_Click(object sender, RoutedEventArgs e)
         {
-            ListParras.Add(parra);
+            
         }
 
         private void GuardarImg_Click(object sender, RoutedEventArgs e)
         {
             ListRuts.Add(rutas);
+            ListParras.Add(parra);
+            ListaTabla.Add(rtablas);
         }
 
         private void comvertir(string filtRuh)
         {
 
-
-            
+                     
 
             
             using (var workbook = new XLWorkbook(filtRuh))
@@ -525,24 +537,101 @@ namespace Prueba4.UserControls
                     foreach (var cell in row.Cells())
                     {
                         rowE.Add(cell.GetValue<string>());
-                         filasT.Add(rowE);
-
+                        
                     }
-                }
-                    
+                    filasT.Add(rowE);
 
-               
-               
+                }
+
+
+
+
             }
 
 
 
         }
 
+        private bool VerificacionI(List<string> conten)
+        {
+
+            if (Pimg != conten.Count )
+            {
+                Simg = true;
+                Pimg = conten.Count;
+            }
+            else
+            {
+                Simg= false;
+            }
+
+            return Simg;            
+
+
+
+        }
+
+        private static void UpdateTableOfContents(string docPath)
+        {
+            // Abrir el documento con Spire.Doc
+            Spire.Doc.Document document = new Spire.Doc.Document();
+            document.LoadFromFile(docPath);
+
+            // Actualizar la tabla de contenidos
+            document.UpdateTableOfContents();
+
+            // Guardar los cambios
+            document.SaveToFile(docPath, FileFormat.Docx);
+        }
+
+        private void TB_TEXT_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Enter)
+            {
+                parra.Add(TB_TEXT.Text);
+
+
+                bool veri = VerificacionI(rutas);
+
+
+
+                rutas.Add("X");
+                TB_TEXT.Clear();
+
+
+            }
+
+
+
+        }
+
+        private void ExcelT_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Archivos de excel|*.xlsx;";
+            openFileDialog.Title = "Seleccionar excel";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Crear una nueva BitmapImage desde el archivo seleccionado
+                string rutaArchivo = openFileDialog.FileName;
+
+
+                rtablas.Add(rutaArchivo);
+                int c = rtablas.Count;
+                int a = parra.Count;
+                if (c > a)
+                {
+                    rtablas[c - 2] = rutaArchivo;
+                    rtablas.Remove(rtablas.Last());
+                }
+
+            }
 
 
 
 
-
+        }
     }
 }
