@@ -85,10 +85,9 @@ namespace Prueba4.UserControls
 
         private void Document_Click(object sender, RoutedEventArgs e)
         {
-
+            string outputPath = @"C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\Test.docx";
 
             CreateDocumentsSpire_SDK();
-
 
         }
 
@@ -131,8 +130,14 @@ namespace Prueba4.UserControls
                         InsertImageNPOI(outputPath, UseI[c], 300 , 200);
                     }
 
+                    if (UseT[c] != "X")
+                    {
+                        // Insertar imagen con NPOI
+                        inserTable(outputPath, UseT[c]);
+                    }
+
                     //inserTable(outputPath);
-                    inserTable(outputPath , UseT[c]);
+                    
 
 
                 }
@@ -322,7 +327,8 @@ namespace Prueba4.UserControls
 
                 // Crear una tabla
                 DocumentFormat.OpenXml.Wordprocessing.Table table = new DocumentFormat.OpenXml.Wordprocessing.Table();
-                table.AppendChild(new TableProperties(new DocumentFormat.OpenXml.Wordprocessing.TableStyle() { Val = "Tablaconcuadrcula4-nfasis5" }));
+                table.AppendChild(new TableProperties(new DocumentFormat.OpenXml.Wordprocessing.TableStyle() { Val = "Tablaconcuadrcula4-nfasis5" },
+                    new DocumentFormat.OpenXml.Wordprocessing.Justification() { Val = DocumentFormat.OpenXml.Wordprocessing.JustificationValues.Center }  ));
 
                 int contC = filasT[0].Count;
                 int contD = filasT.Count;
@@ -449,8 +455,9 @@ namespace Prueba4.UserControls
 
        
             rutas.Add("X");
+            rtablas.Add("X");
 
-    
+
 
 
         }
@@ -597,6 +604,7 @@ namespace Prueba4.UserControls
 
 
                 rutas.Add("X");
+                rtablas.Add("X");
                 TB_TEXT.Clear();
 
 
@@ -629,9 +637,8 @@ namespace Prueba4.UserControls
 
             }
 
-
-
-
         }
+
+
     }
 }
