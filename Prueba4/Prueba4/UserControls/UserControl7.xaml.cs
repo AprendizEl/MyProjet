@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using LiveCharts.Wpf;
 using LiveCharts;
 using Spire.Doc.Fields.Shapes.Charts;
+using DocumentFormat.OpenXml.Drawing;
 
 namespace Prueba4.UserControls
 {
@@ -69,12 +70,12 @@ namespace Prueba4.UserControls
                 {
                     Title = "Fiddlesticks",
                     Values = new ChartValues<double> { 4, 6, 2},
-                    Fill = new SolidColorBrush(Color.FromArgb(50, 100, 255, 100))
+  
  
                 }
             };
 
-            LaBar = new List<string> { "K", "D", "A" };
+            LaBar = new List<string> { "A", "D", "K" };
 
             Grafic1.DataContext = this;
             Grafic2.DataContext = this;

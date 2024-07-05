@@ -25,9 +25,9 @@
             </Grid.ColumnDefinitions>
 
 
-            <Border Grid.Column="2" CornerRadius="10" Margin="10"  >
+            <Border Grid.Column="2" BorderThickness="2" CornerRadius="10" Margin="10"  >
                 <Border.BorderBrush>
-                    <SolidColorBrush Color="Aqua" />
+                    <SolidColorBrush Color="{StaticResource winBorderColor2}" />
                 </Border.BorderBrush>
 
                 <Border.Background>
@@ -59,15 +59,44 @@
                         <ListBox >
                             <ListBoxItem>
 
-                                <Grid Grid.Row="1"  VerticalAlignment="Bottom" >
-                                    <Label Content="Fiddlestick" Foreground="White" ForceCursor="True" />
-                                </Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <Grid Grid.Row="1"  VerticalAlignment="Center" Margin="-5" >
+                                        <Label Content="Victoria" Foreground="{StaticResource color1}" FontSize="16" ForceCursor="True" />
+                                    </Grid>
+                                    <StackPanel Orientation="Horizontal" Margin="20, 0,0,0">
+                                        <Grid Grid.Row="1"  VerticalAlignment="Center" >
+                                            <Label Content="Fiddlestick" Foreground="Gray" ForceCursor="True"  />
+                                        </Grid>
+                                        <Grid Grid.Row="1"  VerticalAlignment="Center"  >
+                                            <Label Content="2/0/19" Foreground="Gray" ForceCursor="True" FontSize="9"  />
+                                        </Grid>
+                                        
+                                    </StackPanel>                                    
+
+                                </StackPanel>                               
 
                             </ListBoxItem>
-                            <ListBoxItem Content="hola" />
-                            <ListBoxItem Content="hola" />
-                            <ListBoxItem Content="hola" />
-                            <ListBoxItem Content="hola" />
+
+                            <ListBoxItem>
+
+                                <StackPanel Orientation="Vertical">
+                                    <Grid Grid.Row="1"  VerticalAlignment="Center" Margin="-5" >
+                                        <Label Content="Victoria" Foreground="{StaticResource color7}" FontSize="16" ForceCursor="True" />
+                                    </Grid>
+                                    <StackPanel Orientation="Horizontal" Margin="20, 0,0,0">
+                                        <Grid Grid.Row="1"  VerticalAlignment="Center" >
+                                            <Label Content="Fiddlestick" Foreground="Gray" ForceCursor="True"  />
+                                        </Grid>
+                                        <Grid Grid.Row="1"  VerticalAlignment="Center"  >
+                                            <Label Content="2/0/19" Foreground="Gray" ForceCursor="True" FontSize="9"  />
+                                        </Grid>
+
+                                    </StackPanel>
+
+                                </StackPanel>
+
+                            </ListBoxItem>
+
 
 
                         </ListBox >
@@ -151,7 +180,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <faWPF:FontAwesome Icon="ArrowLeft" FontSize="34" Grid.Row="1" Cursor="Hand" />
+                        <faWPF:FontAwesome Icon="ArrowLeft" FontSize="34" Grid.Row="1" Foreground="{StaticResource color2}" Cursor="Hand" />
 
                     </Grid>
 
@@ -164,7 +193,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <faWPF:FontAwesome Icon="ArrowRight" FontSize="34" Grid.Row="1" Cursor="Hand"  />
+                        <faWPF:FontAwesome Icon="ArrowRight" FontSize="34" Grid.Row="1" Foreground="{StaticResource color2}" Cursor="Hand"  />
 
                     </Grid>
 

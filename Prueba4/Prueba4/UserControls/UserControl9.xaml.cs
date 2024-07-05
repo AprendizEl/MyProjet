@@ -482,6 +482,10 @@ namespace Prueba4.UserControls
                 rutas.Add(rutaArchivo);
                 int c = rutas.Count;
                 int a = parra.Count;
+                if (rutas[c - 1] != "X")
+                {
+                    rutas[c - 1] = rutaArchivo;
+                }
                 if (c > a)
                 {
                     rutas[c - 2] = rutaArchivo;
@@ -578,18 +582,6 @@ namespace Prueba4.UserControls
 
         }
 
-        private static void UpdateTableOfContents(string docPath)
-        {
-            // Abrir el documento con Spire.Doc
-            Spire.Doc.Document document = new Spire.Doc.Document();
-            document.LoadFromFile(docPath);
-
-            // Actualizar la tabla de contenidos
-            document.UpdateTableOfContents();
-
-            // Guardar los cambios
-            document.SaveToFile(docPath, FileFormat.Docx);
-        }
 
         private void TB_TEXT_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
