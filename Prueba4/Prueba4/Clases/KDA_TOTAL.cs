@@ -12,14 +12,17 @@ namespace Prueba4
         public float DEATHS { get; set; }
         public float ASSISTS { get; set; }
 
+        public float KDATotal { get; set; }
+
         public KDA_TOTAL(float k , float d, float a ) 
         {
             KILLS = k;
             DEATHS = d; 
             ASSISTS = a;
-        
-        
-        
+            KDATotal = k / d / a;
+
+
+
         }
 
 

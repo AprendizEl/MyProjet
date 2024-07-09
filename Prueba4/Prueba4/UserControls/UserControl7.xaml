@@ -27,11 +27,11 @@
 
             <Border Grid.Column="2" BorderThickness="2" CornerRadius="10" Margin="10"  >
                 <Border.BorderBrush>
-                    <SolidColorBrush Color="{StaticResource winBorderColor2}" />
+                    <SolidColorBrush Color="{StaticResource winBorderColor1}" />
                 </Border.BorderBrush>
 
                 <Border.Background>
-                    <SolidColorBrush Color="{StaticResource winBorderColor1}"/>
+                    <SolidColorBrush Color="{StaticResource primaryBackColor1}"/>
                 </Border.Background>
 
 
@@ -44,16 +44,16 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0" >
-                        <Label Content="hola" VerticalAlignment="Center" Foreground="White" FontFamily="Montserrat"  HorizontalAlignment="Center" FontSize="17" />
+                        <Label Content="LEYENDA" VerticalAlignment="Center" Foreground="White" FontFamily="Montserrat"  HorizontalAlignment="Center" FontSize="17" />
                     </Grid>
 
                     <Border Grid.Row="1"  CornerRadius="10" Margin="10"  >
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="Aqua" />
+                            <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
                         </Border.BorderBrush>
 
                         <Border.Background>
-                            <SolidColorBrush Color="{StaticResource winBorderColor2}"/>
+                            <SolidColorBrush Color="{StaticResource  primaryBackColor2}"/>
                         </Border.Background>
 
                         <ListBox >
@@ -81,7 +81,7 @@
 
                                 <StackPanel Orientation="Vertical">
                                     <Grid Grid.Row="1"  VerticalAlignment="Center" Margin="-5" >
-                                        <Label Content="Victoria" Foreground="{StaticResource color7}" FontSize="16" ForceCursor="True" />
+                                        <Label Content="Derrota" Foreground="{StaticResource color7}" FontSize="16" ForceCursor="True" />
                                     </Grid>
                                     <StackPanel Orientation="Horizontal" Margin="20, 0,0,0">
                                         <Grid Grid.Row="1"  VerticalAlignment="Center" >
@@ -159,7 +159,7 @@
 
             <Border Grid.Column="1" CornerRadius="20" Margin="10"  BorderThickness="2" Padding="5" >
                 <Border.BorderBrush>
-                    <SolidColorBrush Color="{StaticResource winBorderColor2}" />
+                    <SolidColorBrush Color="{StaticResource winBorderColor1}" />
                 </Border.BorderBrush>
                 <Border.Background>
                     <ImageBrush ImageSource="C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\undefined - Imgur.png" />
@@ -213,7 +213,7 @@
                         <Grid Grid.Row="1" VerticalAlignment="Stretch"  >
                             <lvc:CartesianChart Series="{Binding ChartBar}" LegendLocation="Right" Name="Grafic2" Foreground="{StaticResource color2}"  >
                                 <lvc:CartesianChart.AxisY>
-                                    <lvc:Axis Labels="{Binding LaBar}" Foreground="{StaticResource color2}" />
+                                    <lvc:Axis Labels="{Binding LaBar}" Foreground="{StaticResource color2}"  />
                                 </lvc:CartesianChart.AxisY>
                             </lvc:CartesianChart>
                         </Grid>
@@ -242,15 +242,14 @@
                     </Border.Background>
 
 
-                    <lvc:PieChart LegendLocation="Bottom" Hoverable="False" Margin="-4"  >
+                    <lvc:PieChart LegendLocation="Bottom" Hoverable="False" Margin="10">
                         <lvc:PieChart.Series>
-                            <lvc:PieSeries Title="Victorias" Values="2" DataLabels="True" Opacity="0.5" Fill="{StaticResource color1}" />
-                            <lvc:PieSeries Title="Derrotas" Values="1" DataLabels="True" Opacity="0.5"    Fill="{StaticResource color7}"/>
-
+                            <lvc:PieSeries Title="Victorias" Values="2" DataLabels="True" Opacity="0.5" Fill="{StaticResource color8}" />
+                            <lvc:PieSeries Title="Derrotas" Values="2" DataLabels="True" Opacity="0.5" Fill="{StaticResource color7}"/>
                         </lvc:PieChart.Series>
                     </lvc:PieChart>
 
-                    
+
 
 
 
@@ -259,12 +258,12 @@
 
 
                 </Border>
-                <Border Grid.Row="1" CornerRadius="20" Margin="10" >
+                <Border Grid.Row="1" CornerRadius="20" Margin="10" Padding="10" BorderThickness="2" >
                     <Border.BorderBrush>
-                        <SolidColorBrush Color="Black" />
+                        <SolidColorBrush Color="{StaticResource winBorderColor1}" />
                     </Border.BorderBrush>
                     <Border.Background>
-                        <SolidColorBrush Color="{StaticResource winBorderColor1}" />
+                        <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
                     </Border.Background>
 
 
@@ -272,10 +271,29 @@
 
 
 
-                        <!--<Grid Grid.Row="0" >
-                            <Label Content="Champi" />
-                        </Grid>-->
-                        
+                    <lvc:CartesianChart   >
+                        <lvc:CartesianChart.Series>
+                            <lvc:ColumnSeries Title="Prueba" 
+                           Values="2,5,1,4,3"
+                           Fill="{StaticResource color1}"/>
+
+                        </lvc:CartesianChart.Series>
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="Champs"  LabelsRotation="-20"  DisableAnimations="True">
+                                <lvc:Axis.Separator>
+                                    <lvc:Separator Step="1" Stroke="Transparent" ></lvc:Separator>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Title="Promedio"  >
+                                <lvc:Axis.Separator>
+                                    <lvc:Separator Step="1" Stroke="Transparent" ></lvc:Separator>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+
 
 
 
@@ -333,13 +351,12 @@
                 </TabControl>
             </Grid>
 
-            <Grid Grid.Column="1">
-                <Border  CornerRadius="20" Margin="10" >
+                <Border CornerRadius="20" Margin="10" BorderThickness="2" Grid.Column="1" Padding="10" >
                     <Border.BorderBrush>
-                        <SolidColorBrush Color="Black" />
+                        <SolidColorBrush Color="{StaticResource winBorderColor1}" />
                     </Border.BorderBrush>
                     <Border.Background>
-                        <SolidColorBrush Color="Cyan" />
+                        <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
                     </Border.Background>
 
 
@@ -347,10 +364,8 @@
 
 
                     <StackPanel >
-                        <Grid Grid.Row="0" >
-                            <Label Content="RaTE" />
-                        </Grid>
 
+                        <TextBlock Text="Maestria" />
 
                     </StackPanel>
 
@@ -359,7 +374,6 @@
                 </Border>
 
 
-            </Grid>
             
            
         </Grid>

@@ -48,8 +48,8 @@ namespace Prueba4.UserControls
             {
                 Title = "Series 1",
                 Values = new ChartValues<double> { 1, 3, 2, 4, 5, 6, 7 },
-                Stroke = new SolidColorBrush(Colors.Green),
-                Fill = new SolidColorBrush(Color.FromArgb(50, 0, 255, 0))
+                Stroke = new SolidColorBrush(Colors.Cyan),
+                Fill = new SolidColorBrush(Color.FromArgb(90, 0, 173, 181))
             };
 
             // Agregar la serie a la colección
@@ -70,6 +70,7 @@ namespace Prueba4.UserControls
                 {
                     Title = "Fiddlesticks",
                     Values = new ChartValues<double> { 4, 6, 2},
+                    Fill = new SolidColorBrush(Color.FromArgb(90, 0, 173, 181)),
   
  
                 }

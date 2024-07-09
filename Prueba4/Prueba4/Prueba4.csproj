@@ -237,6 +237,7 @@
     <Compile Include="Clases\Class1.cs" />
     <Compile Include="Clases\Escaleras.cs" />
     <Compile Include="Clases\KDA_TOTAL.cs" />
+    <Compile Include="Clases\Partidas.cs" />
     <Compile Include="UserControls\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>

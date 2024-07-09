@@ -6,30 +6,68 @@
              xmlns:local="clr-namespace:Prueba4"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#404258">
+    <Grid Background="Transparent" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
+        <Border Grid.Column="0" CornerRadius="20,2,2,20">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="Red"/>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
+            </Border.Background>
 
 
-        <Label Content="Label" HorizontalAlignment="Left" Height="50" Margin="26,80,0,0" VerticalAlignment="Top" Width="63"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="50" Margin="26,0,0,0" VerticalAlignment="Center" Width="63"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="30" Margin="212,77,0,0" VerticalAlignment="Top" Width="64"/>
-        <TextBox x:Name="TB_1" HorizontalAlignment="Left" Height="26" Margin="56,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
-        <TextBox x:Name="TB_2" HorizontalAlignment="Left" Height="22" Margin="244,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60"/>
-        <TextBox x:Name="TB_3" HorizontalAlignment="Left" Height="44" Margin="43,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="121"/>
-        <Button Style="{StaticResource BTNA}" Content="Agregar" HorizontalAlignment="Left" Margin="58,341,0,0" VerticalAlignment="Top" Height="40" Width="162" Click="Button_Click" Grid.RowSpan="2"/>
+            <StackPanel Margin="10" >
+                <StackPanel Orientation="Vertical" Margin="10" >
+                    <Label Content="Duracion" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n1" />
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="Campeon" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n2"  Foreground="{StaticResource color2}"/>
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="Cuanta Recoleccion" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n3" />
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="KDA" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n4" />
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="Victoria" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n5" />
+
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="10">
+
+                    <Button Content="Guardar" />
+                </StackPanel>
+            </StackPanel>
+
+        </Border>
 
 
-         <DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}"  >
+
+
+
+         <!--<DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Tipo" Width="*" Binding="{Binding tipo}"/>
                 <DataGridTextColumn Header="Nombre" Width="*" Binding="{Binding name}"/>
             </DataGrid.Columns>
-        </DataGrid>
+        </DataGrid>-->
     </Grid>
 
 </UserControl>

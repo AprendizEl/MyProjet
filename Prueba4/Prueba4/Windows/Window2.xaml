@@ -125,8 +125,8 @@
                                 Height="35"
                                 Margin="15,25,0,40">
 
-                            <faWPF:ImageAwesome Icon="AddressBook" Height="30" Foreground="{StaticResource color1}" />
-                            <TextBlock Text="LOREM"
+                            <faWPF:ImageAwesome Icon="Bug" Height="30" Foreground="{StaticResource color1}" />
+                            <TextBlock Text="KDA KEEPER"
                                    Foreground="{StaticResource titleColor2}"
                                    FontSize="20"
                                    FontFamily="Montserrat"
@@ -142,7 +142,7 @@
 
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"/>
+                                <TextBlock Text="Inicio" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
 
@@ -150,7 +150,7 @@
                                  Tag="{StaticResource color1}"
                                  Click="RadioButton_Click">
                             <StackPanel Orientation="Horizontal">
-                                <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
+                                <faWPF:ImageAwesome Icon="Wpforms" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Registro" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
@@ -160,8 +160,8 @@
                                      Click="RadioButton_Click_1">
 
                             <StackPanel Orientation="Horizontal">
-                                <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
+                                <faWPF:ImageAwesome Icon="BarChart" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Estadisticas" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
 
@@ -169,8 +169,8 @@
                                      Tag="{StaticResource color1}"
                                      Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked">
                             <StackPanel Orientation="Horizontal">
-                                <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
+                                <faWPF:ImageAwesome Icon="Table" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Tabla" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
 
@@ -178,8 +178,8 @@
                                      Tag="{StaticResource color1}"
                                      Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked_1">
                             <StackPanel Orientation="Horizontal">
-                                <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
+                                <faWPF:ImageAwesome Icon="AreaChart" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Grafica" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
 
