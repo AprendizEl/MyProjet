@@ -44,7 +44,7 @@
 
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10">
-                    <Label Content="Victoria" Foreground="{StaticResource color2}" />
+                    <Label Content="Resultado" Foreground="{StaticResource color2}" />
                     <TextBox Name="n5" />
 
                 </StackPanel>
@@ -53,15 +53,27 @@
 
                     <Button Content="Guardar" />
                 </StackPanel>
+
             </StackPanel>
 
+            
+
         </Border>
+        <Grid Grid.Column="1">
+            <Border Width="auto" Height="auto" BorderBrush="Black" BorderThickness="1">
+                <Border.Background>
+                    <ImageBrush ImageSource="C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\V6KSP6ZEUNGXBPZRBJTR25ZFIM.jpg" 
+                            Viewport="-80,0,700,580"
+                            ViewportUnits="Absolute"
+                            TileMode="None" />
+                </Border.Background>
+            </Border>
+        </Grid>
 
 
 
 
-
-         <!--<DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}"  >
+        <!--<DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Tipo" Width="*" Binding="{Binding tipo}"/>

@@ -97,7 +97,26 @@ namespace Prueba4.UserControls
 
         }
 
-      
+        private void NewPartida()
+        {
+            UserControl12 userControl12 = new UserControl12();
+
+            ListBoxItem s = new ListBoxItem
+            {
+                Content = userControl12
+            };
+
+            LB_P.Items.Add(s);
+            
+
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NewPartida();
+        }
     }
 }
 

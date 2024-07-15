@@ -25,7 +25,7 @@ namespace Prueba4.Clases
             KDA = es;
             Recoleccion = s;
             Vic_Der = vd;
-    }
+        }
 
 
 

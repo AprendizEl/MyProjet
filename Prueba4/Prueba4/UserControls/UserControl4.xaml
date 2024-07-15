@@ -97,7 +97,7 @@
             <lvc:CartesianChart.AxisY>
                 <lvc:Axis Title="Promedio"  MinValue="{Binding MinN}" MaxValue="{Binding MaxN}">
                     <lvc:Axis.Separator>
-                        <lvc:Separator Step="1" Stroke="{StaticResource color1}" ></lvc:Separator>
+                        <lvc:Separator Step="1" Stroke="Transparent" ></lvc:Separator>
                     </lvc:Axis.Separator>
                 </lvc:Axis>
             </lvc:CartesianChart.AxisY>

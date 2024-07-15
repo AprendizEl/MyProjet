@@ -241,6 +241,12 @@
     <Compile Include="UserControls\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl11.xaml.cs">
+      <DependentUpon>UserControl11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl12.xaml.cs">
+      <DependentUpon>UserControl12.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl2.xaml.cs">
       <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
@@ -308,6 +314,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControls\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControl11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControl12.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

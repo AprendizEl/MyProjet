@@ -316,3 +316,8 @@ C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\UserContro
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl9.g.cs
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl8.baml
 C:\Users\jugad\OneDrive\Escritorio\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl9.baml
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl11.g.cs
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl11.baml
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl12.g.cs
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\UserControls\UserControl12.baml
