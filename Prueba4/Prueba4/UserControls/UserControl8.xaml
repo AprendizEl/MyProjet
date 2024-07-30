@@ -10,7 +10,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <lvc:PieChart LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}">
+        <lvc:PieChart LegendLocation="Bottom" Hoverable="False" DataTooltip="{x:Null}">
             <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Win" Values="{Binding Series1}" DataLabels="True" Fill="{StaticResource color1}" Opacity="0.7"
                                LabelPoint="{Binding PointLabel}"/>

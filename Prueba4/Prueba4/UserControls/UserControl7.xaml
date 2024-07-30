@@ -163,12 +163,12 @@
 
                 </Grid>-->
 
-            <Border Grid.Column="1" CornerRadius="20" Margin="10"  BorderThickness="2" Padding="5" >
+            <Border Grid.Column="1" CornerRadius="20" Margin="10" Name="Imagen"  BorderThickness="2" Padding="5" >
                 <Border.BorderBrush>
                     <SolidColorBrush Color="{StaticResource winBorderColor1}" />
                 </Border.BorderBrush>
                 <Border.Background>
-                    <ImageBrush ImageSource="C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\undefined - Imgur.png" />
+                    <ImageBrush ImageSource="{Binding ImageSource}" />
                 </Border.Background>
 
                 <Grid>
@@ -186,7 +186,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <faWPF:FontAwesome Icon="ArrowLeft" FontSize="34" Grid.Row="1" Foreground="{StaticResource color2}" Cursor="Hand" />
+                        <faWPF:FontAwesome Icon="ArrowLeft" FontSize="34" Grid.Row="1" Foreground="{StaticResource color2}" Cursor="Hand"  />
                         <Button Content="Button" Click="Button_Click"/>
 
                     </Grid>
@@ -200,7 +200,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <faWPF:FontAwesome Icon="ArrowRight" FontSize="34" Grid.Row="1" Foreground="{StaticResource color2}" Cursor="Hand"  />
+                        <faWPF:FontAwesome Icon="ArrowRight" FontSize="34" Grid.Row="1" Foreground="{StaticResource color2}" Cursor="Hand" CommandManager.Executed="FontAwesome_Executed"/>
 
                     </Grid>
 
@@ -249,12 +249,7 @@
                     </Border.Background>
 
 
-                    <lvc:PieChart LegendLocation="Bottom" Hoverable="False"  Foreground="{StaticResource color2}" Margin="10">
-                        <lvc:PieChart.Series>
-                            <lvc:PieSeries Title="Victorias" Values="2" Foreground="{StaticResource color2}" DataLabels="True" Opacity="0.5" Fill="{StaticResource color8}" />
-                            <lvc:PieSeries Title="Derrotas" Values="2" Foreground="{StaticResource color2}" DataLabels="True" Opacity="0.5" Fill="{StaticResource color7}"/>
-                        </lvc:PieChart.Series>
-                    </lvc:PieChart>
+                    <local:UserControl8 />
 
 
 
@@ -278,28 +273,7 @@
 
 
 
-                    <lvc:CartesianChart   >
-                        <lvc:CartesianChart.Series>
-                            <lvc:ColumnSeries Title="Prueba" 
-                           Values="2,5,1,4,3"
-                           Fill="{StaticResource color1}"/>
-
-                        </lvc:CartesianChart.Series>
-                        <lvc:CartesianChart.AxisX>
-                            <lvc:Axis Title="Champs"  LabelsRotation="-20"  DisableAnimations="True">
-                                <lvc:Axis.Separator>
-                                    <lvc:Separator Step="1" Stroke="Transparent" ></lvc:Separator>
-                                </lvc:Axis.Separator>
-                            </lvc:Axis>
-                        </lvc:CartesianChart.AxisX>
-                        <lvc:CartesianChart.AxisY>
-                            <lvc:Axis Title="Promedio"  >
-                                <lvc:Axis.Separator>
-                                    <lvc:Separator Step="1" Stroke="Transparent" ></lvc:Separator>
-                                </lvc:Axis.Separator>
-                            </lvc:Axis>
-                        </lvc:CartesianChart.AxisY>
-                    </lvc:CartesianChart>
+                    <local:Gr_Barras />
 
 
 

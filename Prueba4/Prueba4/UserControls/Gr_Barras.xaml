@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Prueba4.UserControls.Gr_Barras"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Prueba4.UserControls"
+             
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             Height="auto" Width="auto">
+    
+    <lvc:CartesianChart >
+        <lvc:CartesianChart.Series>
+            <lvc:ColumnSeries Title="Prueba" 
+                          Values="{Binding Results}"
+                          Fill="{StaticResource color1}"/>
+
+        </lvc:CartesianChart.Series>
+        <lvc:CartesianChart.AxisX>
+            <lvc:Axis   LabelsRotation="-20" Labels="{Binding Labels}" DisableAnimations="True">
+                <lvc:Axis.Separator>
+                    <lvc:Separator Step="1"></lvc:Separator>
+                </lvc:Axis.Separator>
+            </lvc:Axis>
+        </lvc:CartesianChart.AxisX>
+        <lvc:CartesianChart.AxisY>
+            <lvc:Axis   MinValue="{Binding MinN}" MaxValue="{Binding MaxN}">
+                <lvc:Axis.Separator>
+                    <lvc:Separator Step="1"  ></lvc:Separator>
+                </lvc:Axis.Separator>
+            </lvc:Axis>
+        </lvc:CartesianChart.AxisY>
+    </lvc:CartesianChart>
+</UserControl>

@@ -16,6 +16,7 @@ using LiveCharts.Wpf;
 using LiveCharts;
 using Spire.Doc.Fields.Shapes.Charts;
 using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Prueba4.UserControls
 {
@@ -26,6 +27,20 @@ namespace Prueba4.UserControls
     {
         public SeriesCollection ChartBar { get; set; }
         public List<string> LaBar { get; set; }
+
+        private string _imageSource;
+        public string ImageSource
+        {
+            get { return _imageSource; }
+            set
+            {
+                if (_imageSource != value)
+                {
+                    _imageSource = value;
+
+                }
+            }
+        }
 
         List<int> listx = new List<int>();
         List<int> listy = new List<int>();
@@ -48,54 +63,38 @@ namespace Prueba4.UserControls
             {
                 Title = "Series 1",
                 Values = new ChartValues<double> { 1, 3, 2, 4, 5, 6, 7 },
-                Stroke = new SolidColorBrush(Colors.Cyan),
-                Fill = new SolidColorBrush(Color.FromArgb(90, 0, 173, 181))
+                Stroke = new SolidColorBrush(System.Windows.Media.Colors.Cyan),
+                Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(90, 0, 173, 181))
             };
 
             // Agregar la serie a la colección
             SeriesCollection.Add(lineSeriesG);
 
-            // Crear etiquetas para el eje X si es necesario
+            
             Labels = new List<string> { "1", "2", "3", "4", "5", "6", "7" };
 
-            // Establecer el formato del eje Y si es necesario
             YFormatter = value => value.ToString("N");
 
-            // Establecer el contexto de datos
-
+            ImageSource = "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\img\\V6KSP6ZEUNGXBPZRBJTR25ZFIM.jpg";
 
             ChartBar = new SeriesCollection
             {
                 new RowSeries
                 {
                     Title = "Fiddlesticks",
-                    Values = new ChartValues<double> { 4, 6, 2},
-                    Fill = new SolidColorBrush(Color.FromArgb(90, 0, 173, 181)),
+                    Values = new ChartValues<double> { 9, 6, 2},
+                    Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(90, 0, 173, 181)),
   
  
                 }
             };
 
             LaBar = new List<string> { "A", "D", "K" };
-
+            Imagen.DataContext = this;
             Grafic1.DataContext = this;
             Grafic2.DataContext = this;
         }
     
-
-
-        private void relleo()
-        {
-            int Nitem = obj.Count;
-
-            for (int i = 0; i < Nitem; i++)
-            {
-                listx.Add(obj[i].ID);
-                listy.Add(int.Parse(obj[i].name));
-
-            }
-
-        }
 
         private void NewPartida()
         {
@@ -108,12 +107,14 @@ namespace Prueba4.UserControls
 
             LB_P.Items.Add(s);
             
-
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NewPartida();
+        }
+
+        private void FontAwesome_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             NewPartida();
         }

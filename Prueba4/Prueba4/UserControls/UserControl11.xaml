@@ -18,8 +18,32 @@
             <Border.Background>
                 <SolidColorBrush Color="{StaticResource primaryBackColor2}"  Opacity="0.96" />
             </Border.Background>
-            
-            
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="SummonerInfo" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   FontSize="16"/>
+
+                <TextBox Name="SummonerNameTextBox" Width="200" Margin="10"/>
+                    <Button Name="FetchButton" Content="Fetch Summoner" Margin="10"/>
+                    <TextBlock Grid.Row="2" Name="SummonerNameTextBlock" Margin="10,93,10,10"/>
+                    <Image Name="SummonerIcon" Width="100" Height="100" Margin="10"/>
+     
+
+
+            </Grid>
             
             
             
