@@ -136,13 +136,12 @@ namespace Prueba4.UserControls
                         inserTable(outputPath, UseT[c]);
                     }
 
-                    //inserTable(outputPath);
                     
 
 
                 }
-            }                 
-            
+            }
+
             #region
             using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(outputPath, true))
             {
@@ -150,78 +149,125 @@ namespace Prueba4.UserControls
                 MainDocumentPart mainPart = wordDoc.MainDocumentPart;
                 DocumentFormat.OpenXml.Wordprocessing.Body body = mainPart.Document.Body;
 
-                // Crear una tabla
+
                 DocumentFormat.OpenXml.Wordprocessing.Table table = new DocumentFormat.OpenXml.Wordprocessing.Table();
 
-                // Accede a la definición de estilos
-                StyleDefinitionsPart styleDefinitionsPart = mainPart.StyleDefinitionsPart;
+                // Definir las propiedades de la tabla
+                TableProperties tblProperties = new TableProperties(
+                    new TableBorders(
+                        new DocumentFormat.OpenXml.Wordprocessing.TopBorder { Val = new EnumValue<BorderValues>(BorderValues.Thick), Size = 12 },
+                        new DocumentFormat.OpenXml.Wordprocessing.BottomBorder { Val = new EnumValue<BorderValues>(BorderValues.Thick), Size = 12 },
+                        new DocumentFormat.OpenXml.Wordprocessing.LeftBorder { Val = new EnumValue<BorderValues>(BorderValues.Thick), Size = 12 },
+                        new DocumentFormat.OpenXml.Wordprocessing.RightBorder { Val = new EnumValue<BorderValues>(BorderValues.Thick), Size = 12 },
+                        new InsideHorizontalBorder { Val = new EnumValue<BorderValues>(BorderValues.Thick), Size = 12 },
+                        new InsideVerticalBorder { Val = new EnumValue<BorderValues>(BorderValues.Thick), Size = 12 }
+                    )
+                );
+                table.AppendChild(tblProperties);
 
-                if (styleDefinitionsPart != null)
+                // Primera fila con celdas combinadas
+                DocumentFormat.OpenXml.Wordprocessing.TableRow firstRow = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
+                DocumentFormat.OpenXml.Wordprocessing.TableCell combinedCell = new DocumentFormat.OpenXml.Wordprocessing.TableCell();
+                combinedCell.Append(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text("Celda combinada en la primera fila"))));
+                TableCellProperties combinedCellProperties = new TableCellProperties();
+                combinedCellProperties.Append(new GridSpan { Val = 2 }); // Combinar dos columnas
+                combinedCell.Append(combinedCellProperties);
+                firstRow.Append(combinedCell);
+                table.Append(firstRow);
+
+                // Segunda fila con celdas separadas
+                DocumentFormat.OpenXml.Wordprocessing.TableRow secondRow = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
+                for (int colIndex = 0; colIndex < 2; colIndex++)
                 {
-                    // Nombre del estilo de tabla que queremos aplicar
-                    string desiredStyleName = "Grid Table 4 Accent 5";
-                    string desiredStyleId = null;
-
-                    // Verifica si el estilo existe
-                    DocumentFormat.OpenXml.Wordprocessing.Styles styles = styleDefinitionsPart.Styles;
-                    foreach (var style in styles.Elements<DocumentFormat.OpenXml.Wordprocessing.Style>())
-                    {
-                        // Filtra solo los estilos de tabla
-                        if (style.Type != null && style.Type == DocumentFormat.OpenXml.Wordprocessing.StyleValues.Table)
-                        {
-                            // Imprimir todos los nombres de estilos de tabla disponibles para depuración
-                            Console.WriteLine($"Estilo de tabla disponible: {style.StyleName?.Val}");
-
-                            if (style.StyleName?.Val == desiredStyleName)
-                            {
-                                desiredStyleId = style.StyleId;
-                                Console.WriteLine($"Estilo de tabla encontrado: {style.StyleName.Val}");
-                                break;
-                            }
-                        }
-                    }
-
-                    if (desiredStyleId != null)
-                    {
-                        // Crear una nueva tabla
-                        DocumentFormat.OpenXml.Wordprocessing.Table tableS = new DocumentFormat.OpenXml.Wordprocessing.Table();
-
-                        // Crear propiedades de la tabla y aplicar el estilo de tabla
-                        TableProperties tableProperties = new TableProperties();
-                        DocumentFormat.OpenXml.Wordprocessing.TableStyle tableStyle = new DocumentFormat.OpenXml.Wordprocessing.TableStyle() { Val = desiredStyleId };
-                        tableProperties.Append(tableStyle);
-
-                        // Agregar propiedades a la tabla
-                        table.AppendChild(tableProperties);
-
-                        // Crear una fila
-                        DocumentFormat.OpenXml.Wordprocessing.TableRow tableRow = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
-
-                        // Crear una celda
-                        DocumentFormat.OpenXml.Wordprocessing.TableCell tableCell = new DocumentFormat.OpenXml.Wordprocessing.TableCell();
-                        tableCell.Append(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text("Contenido de la celda"))));
-
-                        // Agregar la celda a la fila
-                        tableRow.Append(tableCell);
-
-                        // Agregar la fila a la tabla
-                        table.Append(tableRow);
-
-                        // Agregar la tabla al cuerpo del documento
-                        mainPart.Document.Body.Append(table);
-
-                        // Guardar cambios en el documento
-                        mainPart.Document.Save();
-                    }
-                    else
-                    {
-                        Console.WriteLine("No se encontró el estilo de tabla especificado en la plantilla.");
-                    }
+                    DocumentFormat.OpenXml.Wordprocessing.TableCell cell = new DocumentFormat.OpenXml.Wordprocessing.TableCell();
+                    cell.Append(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text($"Celda {colIndex + 1}"))));
+                    TableCellProperties cellProperties = new TableCellProperties(
+                        new TableCellWidth { Type = TableWidthUnitValues.Dxa, Width = "2400" });
+                    cell.Append(cellProperties);
+                    secondRow.Append(cell);
                 }
-                else
-                {
-                    Console.WriteLine("No se encontraron definiciones de estilo en la plantilla.");
-                }
+                table.Append(secondRow);
+
+                // Agregar la tabla al cuerpo del documento
+                body.Append(table);
+
+                //inserTable(outputPath);
+
+
+
+
+                // Crear una tabla
+                //DocumentFormat.OpenXml.Wordprocessing.Table table3 = new DocumentFormat.OpenXml.Wordprocessing.Table();
+
+                //// Accede a la definición de estilos
+                //StyleDefinitionsPart styleDefinitionsPart = mainPart.StyleDefinitionsPart;
+
+                //if (styleDefinitionsPart != null)
+                //{
+                //    // Nombre del estilo de tabla que queremos aplicar
+                //    string desiredStyleName = "Grid Table 4 Accent 5";
+                //    string desiredStyleId = null;
+
+                //    // Verifica si el estilo existe
+                //    DocumentFormat.OpenXml.Wordprocessing.Styles styles = styleDefinitionsPart.Styles;
+                //    foreach (var style in styles.Elements<DocumentFormat.OpenXml.Wordprocessing.Style>())
+                //    {
+                //        // Filtra solo los estilos de tabla
+                //        if (style.Type != null && style.Type == DocumentFormat.OpenXml.Wordprocessing.StyleValues.Table)
+                //        {
+                //            // Imprimir todos los nombres de estilos de tabla disponibles para depuración
+                //            Console.WriteLine($"Estilo de tabla disponible: {style.StyleName?.Val}");
+
+                //            if (style.StyleName?.Val == desiredStyleName)
+                //            {
+                //                desiredStyleId = style.StyleId;
+                //                Console.WriteLine($"Estilo de tabla encontrado: {style.StyleName.Val}");
+                //                break;
+                //            }
+                //        }
+                //    }
+
+                //    if (desiredStyleId != null)
+                //    {
+                //        // Crear una nueva tabla
+                //        DocumentFormat.OpenXml.Wordprocessing.Table tableS = new DocumentFormat.OpenXml.Wordprocessing.Table();
+
+                //        // Crear propiedades de la tabla y aplicar el estilo de tabla
+                //        TableProperties tableProperties = new TableProperties();
+                //        DocumentFormat.OpenXml.Wordprocessing.TableStyle tableStyle = new DocumentFormat.OpenXml.Wordprocessing.TableStyle() { Val = desiredStyleId };
+                //        tableProperties.Append(tableStyle);
+
+                //        // Agregar propiedades a la tabla
+                //        table.AppendChild(tableProperties);
+
+                //        // Crear una fila
+                //        DocumentFormat.OpenXml.Wordprocessing.TableRow tableRow = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
+
+                //        // Crear una celda
+                //        DocumentFormat.OpenXml.Wordprocessing.TableCell tableCell = new DocumentFormat.OpenXml.Wordprocessing.TableCell();
+                //        tableCell.Append(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text("Contenido de la celda"))));
+
+                //        // Agregar la celda a la fila
+                //        tableRow.Append(tableCell);
+
+                //        // Agregar la fila a la tabla
+                //        table.Append(tableRow);
+
+                //        // Agregar la tabla al cuerpo del documento
+                //        mainPart.Document.Body.Append(table);
+
+                // Guardar cambios en el documento
+     
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine("No se encontró el estilo de tabla especificado en la plantilla.");
+                //    }
+                //}
+                //else
+                //{
+                //    Console.WriteLine("No se encontraron definiciones de estilo en la plantilla.");
+                //}
             }
             #endregion
 

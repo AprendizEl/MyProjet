@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|c:\\users\\eecheto\\desktop\\myprojet\\prueba4\\prueba4\\usercontrols\\usercontrol11.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|c:\\users\\eecheto\\desktop\\myprojet\\prueba4\\prueba4\\usercontrols\\usercontrol9.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol9.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\prueba4\\usercontrols\\usercontrol9.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol9.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\prueba4\\usercontrols\\usercontrol11.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{04E808BD-CEE5-41E3-B5F3-3B0544F72300}|Prueba4\\Prueba4.csproj|solutionrelative:prueba4\\usercontrols\\usercontrol11.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
@@ -67,31 +75,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserControl11.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl11.xaml.cs",
-              "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl11.xaml.cs",
-              "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl11.xaml.cs",
-              "RelativeToolTip": "Prueba4\\UserControls\\UserControl11.xaml.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAhwDYAAABFAAAA",
+              "Title": "UserControl9.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl9.xaml.cs",
+              "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl9.xaml.cs",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl9.xaml.cs",
+              "RelativeToolTip": "Prueba4\\UserControls\\UserControl9.xaml.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAIAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T18:22:01.887Z",
+              "WhenOpened": "2024-07-31T13:50:49.482Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UserControl9.xaml",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl9.xaml",
+              "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl9.xaml",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl9.xaml",
+              "RelativeToolTip": "Prueba4\\UserControls\\UserControl9.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-31T13:50:33.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserControl11.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl11.xaml.cs",
+              "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl11.xaml.cs",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl11.xaml.cs",
+              "RelativeToolTip": "Prueba4\\UserControls\\UserControl11.xaml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAIA1wDYAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T18:22:01.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserControl11.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl11.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl11.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl11.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl11.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-15T17:36:23.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T17:36:23.833Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\App.xaml.cs",
               "RelativeDocumentMoniker": "Prueba4\\App.xaml.cs",
@@ -99,12 +129,11 @@
               "RelativeToolTip": "Prueba4\\App.xaml.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAQwBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T18:13:22.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T18:13:22.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Gr_Barras.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\Gr_Barras.xaml.cs",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\Gr_Barras.xaml.cs",
@@ -112,24 +141,22 @@
               "RelativeToolTip": "Prueba4\\UserControls\\Gr_Barras.xaml.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAAADwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-19T18:03:11.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T18:03:11.745Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Gr_Barras.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\Gr_Barras.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\Gr_Barras.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\Gr_Barras.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\Gr_Barras.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-19T17:58:43.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T17:58:43.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "UserControl4.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl4.xaml.cs",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl4.xaml.cs",
@@ -137,72 +164,66 @@
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl4.xaml.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAYwCgAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-19T18:02:56.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T18:02:56.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "UserControl3.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl3.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl3.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl3.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl3.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-19T17:56:15.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T17:56:15.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "UserControl4.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl4.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl4.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl4.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl4.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-19T17:54:50.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T17:54:50.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UserControl5.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl5.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl5.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl5.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl5.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-19T17:54:45.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T17:54:45.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "UserControl6.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl6.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl6.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl6.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl6.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-19T17:54:42.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T17:54:42.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "UserControl8.xaml",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl8.xaml",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl8.xaml",
               "ToolTip": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl8.xaml",
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl8.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-19T17:54:38.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T17:54:38.171Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "botones.cs",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\Eventos\\botones.cs",
               "RelativeDocumentMoniker": "Prueba4\\Eventos\\botones.cs",
@@ -210,12 +231,11 @@
               "RelativeToolTip": "Prueba4\\Eventos\\botones.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T18:23:09.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T18:23:09.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UserControl7.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\MyProjet\\Prueba4\\Prueba4\\UserControls\\UserControl7.xaml.cs",
               "RelativeDocumentMoniker": "Prueba4\\UserControls\\UserControl7.xaml.cs",
@@ -223,8 +243,7 @@
               "RelativeToolTip": "Prueba4\\UserControls\\UserControl7.xaml.cs",
               "ViewState": "AQIAAGgAAAAAAAAAAAAwwGsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T18:42:09.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T18:42:09.325Z"
             }
           ]
         }
