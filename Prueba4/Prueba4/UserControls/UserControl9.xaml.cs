@@ -562,20 +562,15 @@ namespace Prueba4.UserControls
 
         private void GuardaParras_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
-
-        private void GuardarImg_Click(object sender, RoutedEventArgs e)
-        {
             ListRuts.Add(rutas);
             ListParras.Add(parra);
             ListaTabla.Add(rtablas);
         }
 
+
         private void comvertir(string filtRuh)
         {
-
-                     
+                              
 
             
             using (var workbook = new XLWorkbook(filtRuh))
