@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Prueba4.Windows;
 using System.Windows.Shapes;
+using MaterialDesignThemes.Wpf;
 
 namespace Prueba4
 {
@@ -116,11 +117,10 @@ namespace Prueba4
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
-
             Window2 w2 = new Window2();
-            Window1 w = new Window1();
-            w2.Show();
-            w.Close();
+            w2.ShowDialog();
+            Close();
+            
             
         }
 

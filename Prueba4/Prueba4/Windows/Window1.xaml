@@ -28,7 +28,7 @@
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="{StaticResource winBorderColor1}" Offset="0" />
                     <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.75" />
-                    <GradientStop Color="{StaticResource winBorderColor3}" Offset="1" />
+                    <!--<GradientStop Color="{StaticResource winBorderColor3}" Offset="1" />-->
                 </LinearGradientBrush>
             </Border.BorderBrush>
 
@@ -78,10 +78,10 @@
                             Click="btnMinimize_Click">
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#EC625F"/>
+                                <Setter Property="Background" Value="#EE2EEFF3"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FFEF3834"/>
+                                        <Setter Property="Background" Value="#EEEE"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -137,8 +137,8 @@
                             Orientation="Vertical"
                             Margin="0,35,0,0">
 
-                    <faWPF:ImageAwesome Icon="AddressBook" Width="100 " Height="100" Foreground="#EC625F" />
-                    <TextBlock Text="LOREM LOREM?"
+                    <faWPF:ImageAwesome Icon="AddressBook" Width="100 " Height="100" Foreground="#EE2EEFF3" />
+                    <TextBlock Text="Bienvenido"
                                Foreground="White"
                                FontSize="25"
                                FontWeight="Medium"
@@ -146,7 +146,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,5,0,0"/>
 
-                    <TextBlock Text="Lorem Lorem LoremLoremLoremLoremLoremLoremLoremLoremLoremLorem"
+                    <TextBlock Text="Encontraras todas las estadisticas y datos importantes de tus jugadores favoritos , inserta el nombre"
                                Foreground="White"
                                FontSize="12"
                                FontWeight="Medium"
@@ -179,7 +179,7 @@
                         </TextBox.Background>
                         
                     </TextBox>
-                    <TextBlock Text="Contraseña"
+                    <!--<TextBlock Text="Contraseña"
                                Foreground="White"
                                FontSize="10"
                                FontWeight="Medium"
@@ -204,7 +204,7 @@
                         </PasswordBox.Background>
 
 
-                    </PasswordBox>
+                    </PasswordBox>-->
 
                     <Button x:Name="btnEntrar"                          
                             BorderThickness="0"
@@ -217,10 +217,10 @@
                             Click="btnEntrar_Click">
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#EC625F" /> 
+                                <Setter Property="Background" Value="#EE2EEFF3" /> 
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FFEF3834"/>
+                                        <Setter Property="Background" Value="#EEEE"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
