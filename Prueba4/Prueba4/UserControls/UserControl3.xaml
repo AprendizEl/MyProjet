@@ -25,33 +25,40 @@
             <StackPanel Margin="10" >
                 <StackPanel Orientation="Vertical" Margin="10" >
                     <Label Content="Duracion" Foreground="{StaticResource color2}" />
-                    <TextBox Name="n1" />
+                    <TextBox Name="tempo" Text="{Binding Duracion}" />
 
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10">
                     <Label Content="Campeon" Foreground="{StaticResource color2}" />
-                    <TextBox Name="n2"  Foreground="{StaticResource color2}"/>
+                    <TextBox Name="n2" Text="{Binding Campeon}" Foreground="{StaticResource color2}"  />
 
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10">
                     <Label Content="Cuanta Recoleccion" Foreground="{StaticResource color2}" />
-                    <TextBox Name="n3" />
+                    <TextBox Name="n3" Text="{Binding Recoleccion}" />
 
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10">
                     <Label Content="KDA" Foreground="{StaticResource color2}" />
-                    <TextBox Name="n4" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="K" Width="70" Margin="5" Text="{Binding KDA.KILLS}" />
+                        <TextBlock Text="/" />
+                        <TextBox Name="D" Width="70" Margin="5" Text="{Binding KDA.DEATHS}"/>
+                        <TextBlock Text="/" />
+                        <TextBox Name="A" Width="70" Margin="5" Text="{Binding KDA.ASSISTS}"/>
+                    </StackPanel>
+                    
 
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10">
                     <Label Content="Resultado" Foreground="{StaticResource color2}" />
-                    <TextBox Name="n5" />
+                    <TextBox Name="n5" Text="{Binding vic_der}" />
 
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="10">
 
-                    <Button Content="Guardar" />
+                    <Button Content="Guardar" Click="Button_Click" />
                 </StackPanel>
 
             </StackPanel>

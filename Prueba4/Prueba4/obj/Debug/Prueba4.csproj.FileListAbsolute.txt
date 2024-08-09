@@ -338,3 +338,8 @@ C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\System.Threading.Tas
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\RiotSharp.dll
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\RiotSharp.pdb
 C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\RiotSharp.xml
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\itextsharp.dll
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\itextsharp.xml
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\ExCSS.dll
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\Svg.dll
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\bin\Debug\Svg.xml

@@ -78,7 +78,7 @@ namespace Prueba4.Windows
         private void RadioButton_Click_1(object sender, RoutedEventArgs e)
         {
             item7.Children.Clear();
-            item7.Children.Add(new UserControl11());
+            item7.Children.Add(new UserControl4());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

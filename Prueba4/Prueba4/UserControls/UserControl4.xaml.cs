@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Helpers;
+using Prueba4.Clases;
 
 namespace Prueba4
 {
@@ -38,22 +39,17 @@ namespace Prueba4
         {
             InitializeComponent();
 
-            Results = new ChartValues<int>{ 0, 0, 0 ,0};
+            Results = new ChartValues<int>{ 10, 5, 10 ,1};
   
-
+            //Partidas New = 
      
-            Labels = new List<string> { "nada", "nada", "nada", "Nada" };
+            //Labels = new List<string> { "nada", "nada", "nada", "Nada" };
 
             CB_Fil.ItemsSource = Labels;
 
 
             MaxN = 0;
             MinN = 0;
-
-            
-
-
-
             DataContext = this;
 
             listO = UserControl3.Esca;
@@ -117,8 +113,6 @@ namespace Prueba4
             CordY();
             if ( TB_Sech.Text != null & TB_Sech.Text != "")
             {
- 
-
                 for (int i = 0; i < Nitem; i++)
                 {
                     
@@ -127,9 +121,7 @@ namespace Prueba4
                         filtery.Add(listO[i].ID);
                         filterx.Add(listO[i].tipo);
                     }
-
                 }
-
                 Labels.Clear();
                 Results.Clear();
                 Results.AddRange(filtery);
