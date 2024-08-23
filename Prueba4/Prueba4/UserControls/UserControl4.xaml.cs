@@ -52,7 +52,7 @@ namespace Prueba4
             MinN = 0;
             DataContext = this;
 
-            listO = UserControl3.Esca;
+            //listO = 5 ;
 
             for (int i = 0; listO.Count > i; i++)
             {

@@ -22,27 +22,27 @@
 
             <StackPanel Grid.Column="0" Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" 
-                Margin="10 0"
-                Foreground="{StaticResource plainTextColor3}"
-                FontSize="16"
-                >
-         
-                 Filtrar
+             Margin="10 0"
+             Foreground="{StaticResource plainTextColor3}"
+             FontSize="16"
+             >
+      
+              Filtrar
 
                 </TextBlock>
                 <TextBox Name="TB_Sech"
-                          FontSize="13"
-                          FontWeight="Medium"
-                          FontFamily="Montserrat"                            
-                          Foreground="White"
-                          CaretBrush="LightGray"
-                          BorderBrush="DarkGray"
-                          BorderThickness="0,0,0,2"
-                          Height="28"
-                          VerticalContentAlignment="Center"
-                          Margin="0,0,0,5"
-                          Padding="75,0,75,0"
-                          TextChanged="TB_Sech_TextChanged">
+                       FontSize="13"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"                            
+                       Foreground="White"
+                       CaretBrush="LightGray"
+                       BorderBrush="DarkGray"
+                       BorderThickness="0,0,0,2"
+                       Height="28"
+                       VerticalContentAlignment="Center"
+                       Margin="0,0,0,5"
+                       Padding="75,0,75,0"
+                       TextChanged="TB_Sech_TextChanged">
                     <TextBox.Background>
                         <SolidColorBrush Color="Transparent"/>
                     </TextBox.Background>
@@ -54,38 +54,38 @@
 
             <StackPanel Grid.Column="1" Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" 
-                            Margin="10 0"
-                            Foreground="{StaticResource plainTextColor3}"
-                            FontSize="16"
-                                        >
+                         Margin="10 0"
+                         Foreground="{StaticResource plainTextColor3}"
+                         FontSize="16"
+                                     >
  
-                                 Filtrar
+                              Filtrar
 
                 </TextBlock>
                 <ComboBox Name="CB_Fil"
-                          FontSize="13"
-                          FontWeight="Medium"
-                          FontFamily="Montserrat"
-                          BorderThickness="0,0,0,2"
-                          Height="28" 
-                          Margin="0,5,0,0"
-                          Padding="75,0,75,0" 
-                          
-                          />
+                       FontSize="13"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       BorderThickness="0,0,0,2"
+                       Height="28" 
+                       Margin="0,5,0,0"
+                       Padding="75,0,75,0" 
+                       
+                       />
 
             </StackPanel>
 
         </Grid>
 
 
-       
-        
+
+
         <lvc:CartesianChart Grid.Row="1"  >
             <lvc:CartesianChart.Series>
                 <lvc:ColumnSeries Title="Prueba" 
-                                  Values="{Binding Results}"
-                                  Fill="{StaticResource color1}"/>
-                
+                               Values="{Binding Results}"
+                               Fill="{StaticResource color1}"/>
+
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Champs"  LabelsRotation="-20" Labels="{Binding Labels}" DisableAnimations="True">
@@ -102,6 +102,6 @@
                 </lvc:Axis>
             </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
-        
+
     </Grid>
 </UserControl>

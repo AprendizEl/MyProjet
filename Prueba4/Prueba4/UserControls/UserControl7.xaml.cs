@@ -20,6 +20,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.Xml.Linq;
 using Dynamitey;
+using DocumentFormat.OpenXml.Office.CustomUI;
 
 
 namespace Prueba4.UserControls
@@ -192,12 +193,54 @@ namespace Prueba4.UserControls
                 //}
                 #endregion
 
+                List<Tuple<float,float>> puntos = new List<Tuple<float,float>>();
+                var s = puntos[1].Item1;
+                Tuple<float, float> e = Tuple.Create(float.Parse("2"), float.Parse("5"));
+                puntos.Add(e);
+        
 
-                for(int i = 0; i < 1; i++)
+                List<List<Tuple<float>>> LP = new List<List<Tuple<float>>>();
+
+
+                float valre1 = 1;
+                float valre2 = 1;
+                int contadorl = 1;
+                int contador = 1;
+
+                for (int i = 0; i < LP.Count; i++)
                 {
-                    insert(cb, i);
+                    if (contador == 1)
+                    {
+                        valre1 = 1;
+                    }
+               
+                    if (contador == 2)
+                    {
+                        valre1 = 6.3f;
+                    }
+
+
+                    if (contador == 3)
+                    {
+                        valre1 = 1;
+                        contadorl++;
+                        contador = 1;
+                    }
+                    if (contadorl == 2)
+                    {
+                        
+                        valre2 = 1.65f;
+                    }
+                    if (contadorl == 3)
+                    {
+                        valre2 = 5f;
+                    }
+                    insert(cb, valre1, valre2, LP[i]);
+                    contador++;
+           
+                    
                 }
-                
+
 
 
                 document.Close();
@@ -207,18 +250,23 @@ namespace Prueba4.UserControls
         }
 
 
-        private void insert(PdfContentByte cb , int pos)
+        private void insert(PdfContentByte cb , float valre1 , float valre2, List<Tuple<float>> datos )
         {
+            var datosx = new List<float>();
+            var datosy = new List<float>();
 
-            int p = pos == 0 ? pos == 1 ? pos + 1 :  1 :  1 ;
+            datos.ForEach(d => datosx.Add(d.Item1));
+            datos.ForEach(d => datosy.Add(d.Item1));
+
+
 
             //punto 0
-            float chartX = 50 * p;
-            float chartY = 500 * p;
+            float chartX = 50 * valre1;
+            float chartY = 620 / valre2;
 
             //Dimensiones del chart
-            float chartWidth = 500 * p;
-            float chartHeight = 300 * p;
+            float chartWidth = 500 * 0.45f;
+            float chartHeight = 300 * 0.5f;
 
             // Dibujar el eje X y el eje Y
             cb.MoveTo(chartX, chartY + chartHeight);
@@ -227,8 +275,8 @@ namespace Prueba4.UserControls
 
 
             // Dibujar el gráfico lineal
-            float[] dataPoints = { 1,2,1,3,1,5,1 }; // Datos Y
-            float[] dataPointsx = {5,10,20,25,30,31,33 }; // Datos X
+            float[] dataPoints = datosx.ToArray(); // Datos Y
+            float[] dataPointsx = datosy.ToArray(); // Datos X
 
             float maxDataPointy = dataPoints.Max();
             float maxDataPointx = dataPointsx.Max();
@@ -271,12 +319,11 @@ namespace Prueba4.UserControls
             }
 
             //Numero y
-            for (int i = 0; i < 10;i++)
+            for (int i = 0; i < 5; i++)
             {
-                cb.BeginText();
-                cb.SetFontAndSize(font.BaseFont, font.Size);
-                cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, $"{(i + 1) * 1}", chartX - 16, chartY + 15 + i * 32, 0);
-                cb.EndText();
+
+                string ytext = (i * 1).ToString();
+                cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, ytext, chartX - 15, chartY + (i * 1) * stepY, 0);
             }
 
             //Numero x
@@ -288,11 +335,11 @@ namespace Prueba4.UserControls
             //    cb.EndText();
             //}
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 7; i++)
             {
         
-                string xLabel = (i * 5).ToString();
-                cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, xLabel, chartX + i * (stepX * 5), chartY - 15, 0);
+                string xtext = (i * 5).ToString();
+                cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, xtext, chartX + (i * 5) * stepX , chartY - 15, 0);
             }
 
             //for (int i = 1; i < dataPointsx.Length; i++)

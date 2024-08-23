@@ -31,18 +31,18 @@ namespace Prueba4.UserControls
         {
             InitializeComponent();
 
-            KDA_TOTAL KDA_TOTAL = new KDA_TOTAL(0,4,10);
-            KDA_TOTAL.KILLS = 0;
-            KDA_TOTAL.ASSISTS = 4;
-            KDA_TOTAL.DEATHS = 10;
-            Partidas Partidas = new Partidas("SEE", 10, KDA_TOTAL, 7, "WIN");
+            //KDA_TOTAL KDA_TOTAL = new KDA_TOTAL(0,4,10);
+            //KDA_TOTAL.KILLS = 0;
+            //KDA_TOTAL.ASSISTS = 4;
+            //KDA_TOTAL.DEATHS = 10;
+            //Partidas Partidas = new Partidas();
 
 
 
 
-            Text1 = Partidas.Vic_Der = "Victoria";
-            Text2 = Partidas.Campeon = "Fiddlestick";
-            Text3 = $"{Partidas.KDA.KILLS}/{Partidas.KDA.DEATHS}/{Partidas.KDA.ASSISTS}";
+            //Text1 =  "Victoria";
+            //Text2 ="Fiddlestick";
+            //Text3 = $"";
 
             DataContext = this;
         }

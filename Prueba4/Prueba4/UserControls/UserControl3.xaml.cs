@@ -24,31 +24,16 @@ namespace Prueba4
     public partial class UserControl3 : UserControl
     {
 
-        public ObservableCollection<Escaleras> Items { get; set; } = new ObservableCollection<Escaleras>();
-        public static Partidas Partidas;
-
-        public static List<Escaleras> Esca = new List<Escaleras>();
-        //List<int> datos1 = new List<int>();
-        //List<int> datos2 = new List<int>();
-        //List<int> datos3 = new List<int>();
+        public VM_USER3 vm = new VM_USER3 ();
 
         public UserControl3()
         {
             InitializeComponent();
-            var kda = new KDA_TOTAL(1,1,1);
-            var s = new Partidas("BRRRRR", 0,kda,0,"");
-            Partidas = s;
-            DataContext = Partidas;
-
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show($"SS{Partidas.Campeon}");
    
+            DataContext = vm;
 
         }
+
 
 
     }

@@ -56,7 +56,7 @@
                     </Border.Background>
 
                     <Grid x:Name="Gr_Barras">
-                        <local:Gr_Barras />
+                       
                     </Grid>
                     
 
@@ -74,9 +74,7 @@
                         <Border.BorderBrush>
                             <SolidColorBrush Color="{StaticResource winBorderColor1}" />
                         </Border.BorderBrush>
-                        <Border.Background>
-                            <ImageBrush ImageSource="{Binding ImageSource}" />
-                        </Border.Background>
+                       
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -282,26 +280,26 @@
             </Grid>
 
             <Border CornerRadius="20" Margin="10" BorderThickness="2" Grid.Column="1" Padding="10" >
-                    <Border.BorderBrush>
-                        <SolidColorBrush Color="{StaticResource winBorderColor1}" />
-                    </Border.BorderBrush>
-                    <Border.Background>
-                        <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
-                    </Border.Background>
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="{StaticResource winBorderColor1}" />
+                </Border.BorderBrush>
+                <Border.Background>
+                    <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
+                </Border.Background>
 
-                    <StackPanel >
+                <StackPanel >
 
-                        <TextBlock Text="Maestria" />
+                    <TextBlock Text="Maestria" />
 
-                    </StackPanel>
-
-
-
-                </Border>
+                </StackPanel>
 
 
-            
-           
+
+            </Border>
+
+
+
+
         </Grid>
         
       

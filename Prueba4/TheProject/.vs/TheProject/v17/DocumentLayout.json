@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|c:\\users\\eecheto\\desktop\\pruebas\\prueba2\\theproject\\theproject\\viewmodels\\vm_wcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|solutionrelative:theproject\\viewmodels\\vm_wcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|c:\\users\\eecheto\\desktop\\pruebas\\prueba2\\theproject\\theproject\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|solutionrelative:theproject\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|c:\\users\\eecheto\\desktop\\pruebas\\prueba2\\theproject\\theproject\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|solutionrelative:theproject\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|c:\\users\\eecheto\\desktop\\pruebas\\prueba2\\theproject\\theproject\\models\\m_wcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|solutionrelative:theproject\\models\\m_wcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|c:\\users\\eecheto\\desktop\\pruebas\\prueba2\\theproject\\theproject\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|solutionrelative:theproject\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|c:\\users\\eecheto\\desktop\\pruebas\\prueba2\\theproject\\theproject\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E19DD1DC-5E86-47DE-8370-4236ED07B620}|TheProject\\TheProject.csproj|solutionrelative:theproject\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VM_WContainer.cs",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\ViewModels\\VM_WContainer.cs",
+              "RelativeDocumentMoniker": "TheProject\\ViewModels\\VM_WContainer.cs",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\ViewModels\\VM_WContainer.cs",
+              "RelativeToolTip": "TheProject\\ViewModels\\VM_WContainer.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAhwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T20:46:08.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "M_WContainer.cs",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\Models\\M_WContainer.cs",
+              "RelativeDocumentMoniker": "TheProject\\Models\\M_WContainer.cs",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\Models\\M_WContainer.cs",
+              "RelativeToolTip": "TheProject\\Models\\M_WContainer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T20:45:32.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\App.xaml",
+              "RelativeDocumentMoniker": "TheProject\\App.xaml",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\App.xaml",
+              "RelativeToolTip": "TheProject\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-23T20:39:58.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "TheProject\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\AssemblyInfo.cs",
+              "RelativeToolTip": "TheProject\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T20:28:47.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "TheProject\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\MainWindow.xaml",
+              "RelativeToolTip": "TheProject\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-23T20:25:08.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "TheProject\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\eecheto\\Desktop\\Pruebas\\prueba2\\TheProject\\TheProject\\MainWindow.xaml.cs",
+              "RelativeToolTip": "TheProject\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T20:25:08.649Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prueba4.Windows"
+        xmlns:clas="clr-namespace:Prueba4.Clases"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         AllowsTransparency="True"
@@ -15,7 +17,7 @@
     <Border CornerRadius="0" Name="thescreen">
 
         <Border BorderThickness="2" 
-             CornerRadius="2">
+             CornerRadius="0">
 
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -34,6 +36,7 @@
             </Border.Background>
 
 
+
             <Grid Name="Grid_1">
 
                 <Grid.ColumnDefinitions>
@@ -41,8 +44,11 @@
                     <ColumnDefinition Width="250" />
 
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Name="ColC" Width="0" />
+
                 </Grid.ColumnDefinitions>
+
+
+
 
                 <Grid Grid.Column="2">
 
@@ -69,7 +75,7 @@
 
                         </StackPanel>
 
-                        
+
                     </StackPanel>
                     <StackPanel Grid.Row="1" >
 
@@ -93,9 +99,9 @@
                     </StackPanel>
 
                 </Grid>
-                
 
-                <Border CornerRadius="0,14,14,0" 
+
+                <Border CornerRadius="0" 
                         Grid.Column="1">
 
                     <Border.Background>
@@ -107,7 +113,7 @@
                     </Border.Background>
 
                 </Border>
-                <Border CornerRadius="14,0,0,14"
+                <Border CornerRadius="0"
                         Grid.Column="0">
 
                     <Border.Background>
@@ -136,7 +142,8 @@
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color1}"
                                  IsChecked="False"
-                                 Command="{Binding ShowHomeViewCommand}" Checked="RadioButton_Checked_2">
+                                 Command="{Binding changepages}"
+                                 CommandParameter="{x:Static clas:ePageView.DashBoard}">
 
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="Home" Style="{StaticResource menuButtonIcon}"/>
@@ -144,9 +151,11 @@
                             </StackPanel>
                         </RadioButton>
 
-                        <RadioButton Style="{StaticResource menuButton}"
+                        <RadioButton 
+                                 Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color1}"
-                                 Click="RadioButton_Click">
+                                 Command="{Binding changepages}"
+                                 CommandParameter="{x:Static clas:ePageView.Register}">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="Wpforms" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Registro" Style="{StaticResource menuButtonText}"/>
@@ -155,7 +164,8 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource color1}"
-                                     Click="RadioButton_Click_1">
+                                     Command="{Binding changepages}"
+                                     CommandParameter="{x:Static clas:ePageView.Stats}">
 
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="BarChart" Style="{StaticResource menuButtonIcon}"/>
@@ -165,7 +175,8 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource color1}"
-                                     Checked="RadioButton_Checked">
+                                     Command="{Binding changepages}"
+                                     CommandParameter="{x:Static clas:ePageView.ViewChamps}">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="Table" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Tabla" Style="{StaticResource menuButtonText}"/>
@@ -174,7 +185,8 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource color1}"
-                                     Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked_1">
+                                     Command="{Binding changepages}"
+                                     CommandParameter="{x:Static clas:ePageView.Graphic}">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="AreaChart" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Grafica" Style="{StaticResource menuButtonText}"/>
@@ -183,19 +195,20 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource color1}"
-                                     Command="{Binding ShowCustomerViewCommand}" Checked="RadioButton_Checked_3">
+                                     Command="{Binding changepages}"
+                                     CommandParameter="{x:Static clas:ePageView.GenerateDocument}">
                             <StackPanel Orientation="Horizontal">
                                 <faWPF:ImageAwesome Icon="User" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
 
-                        <TextBlock Text="READY IK" Margin="30,0,30,-240" Foreground="{StaticResource color1}" VerticalAlignment="Bottom" />
+                        <TextBlock Text="READY IK" Margin="30,0,30,-240" FontWeight="Regular" Foreground="{StaticResource color1}" VerticalAlignment="Bottom" />
 
 
 
                     </StackPanel>
-                                      
+
 
                 </Border>
 
@@ -216,8 +229,8 @@
                             <!--Content section / Child views-->
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        
-                        
+
+
                         <!--Control bar-->
                         <StackPanel x:Name="pnlControlBar"
                                 Grid.Row="0"
@@ -270,18 +283,20 @@
                             <StackPanel Grid.Column="0"
                                     Orientation="Horizontal"
                                     VerticalAlignment="Center">
-                                <faWPF:ImageAwesome Icon="Home"
+                                <faWPF:ImageAwesome Icon="{Binding model.iconpage}"
                                           Height="20"
                                           Width="20"
                                           Foreground="{StaticResource titleColor2}"
-                                          Margin="35,0,10,0"/>
+                                          Margin="40,0,10,0"
+                                          Name="IconPage"/>
 
-                                <TextBlock Text="DashBoard"
+                                <TextBlock Text="{Binding model.PageView}"
                                        Foreground="{StaticResource titleColor2}"
                                        FontSize="16"
                                        FontFamily="Montserrat"
                                        FontWeight="Medium"
-                                       VerticalAlignment="Center"/>
+                                       VerticalAlignment="Center"
+                                       Name="NamePage"/>
                             </StackPanel>
 
                             <!--User options-->
@@ -292,7 +307,7 @@
                                     Margin="0,0,10,0">
                                 <Button Style="{StaticResource iconButton}"
                                         Tag="{StaticResource color5}"
-                                            Click="Button_Click">
+                                        >
                                     <faWPF:ImageAwesome Icon="Gear" Style="{StaticResource  iconI}"/>
 
                                 </Button>
@@ -311,24 +326,65 @@
                                            FontSize="12"
                                            VerticalAlignment="Center"/>
                                 <Button Style="{StaticResource iconButton}"
-                                    Tag="{StaticResource color3}">
+                                    Tag="{StaticResource color3}"
+                                        
+                                        Name="BT_Info">
                                     <faWPF:ImageAwesome Icon="Info" Style="{StaticResource  iconI}"/>
                                 </Button>
                                 <Button Style="{StaticResource iconButton}"
                                     Tag="{StaticResource color4}">
                                     <faWPF:ImageAwesome Icon="Envelope" Style="{StaticResource iconI}"/>
                                 </Button>
-                                
+
                             </StackPanel>
 
                         </Grid>
 
                         <Grid x:Name="item7" Grid.Row="2" Margin="25" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+
+                            
                             
                         </Grid>
+                        
+                        
+                        
                     </Grid>
                 </Border>
-                
+                <Border BorderThickness="2,2,0,0" Grid.Column="1" HorizontalAlignment="Right" Height="672" Name="B_Config" VerticalAlignment="Bottom" Width="240" CornerRadius="0,0,0,0" >
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="{StaticResource winBorderColor2}" />
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
+                    </Border.Background>
+
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Style="{StaticResource iconButton}"
+                                         Tag="{StaticResource color6}"
+                                         
+                                        >
+                                    <faWPF:ImageAwesome Icon="Gear" Style="{StaticResource  iconI}"/>
+
+                                </Button>
+
+                                <TextBlock Text="Configuracion general" Foreground="{StaticResource titleColor1}" Visibility="Hidden" />
+                            </StackPanel>
+                            
+                        </Grid>
+                        
+                    </Grid>
+                    
+                    
+                </Border>
+
             </Grid>
 
 

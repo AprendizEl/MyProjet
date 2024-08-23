@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="Prueba4.Views.View_Register"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Prueba4.Views"
+                mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Transparent" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" CornerRadius="20,2,2,20">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="Red"/>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource primaryBackColor1}" />
+            </Border.Background>
+
+
+            <StackPanel Margin="10" >
+                <StackPanel Orientation="Vertical" Margin="10" >
+                    <Label Content="Duracion" Foreground="{StaticResource color2}" />
+                    <TextBox Name="tempo" Text="{Binding game.Duration}" />
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="Campeon" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n2" Text="{Binding game.Champion}" Foreground="{StaticResource color2}"  />
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="Cuanta Recoleccion" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n3" Text="{Binding game.Collection}" />
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="KDA" Foreground="{StaticResource color2}" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="K" Width="70" Margin="5" Text="{Binding game.KDA.KILLS}" />
+                        <TextBlock Text="/" />
+                        <TextBox Name="D" Width="70" Margin="5" Text="{Binding game.KDA.DEATHS}"/>
+                        <TextBlock Text="/" />
+                        <TextBox Name="A" Width="70" Margin="5" Text="{Binding game.KDA.ASSISTS}"/>
+                    </StackPanel>
+
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <Label Content="Resultado" Foreground="{StaticResource color2}" />
+                    <TextBox Name="n5" Text="{Binding game.Vic_Def}" />
+
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="10">
+
+                    <Button Content="Guardar" Command="{Binding savepartidad}" />
+                </StackPanel>
+
+            </StackPanel>
+
+
+
+        </Border>
+        <Grid Grid.Column="1">
+            <Border Width="auto" Height="auto" BorderBrush="Black" BorderThickness="1">
+                <Border.Background>
+                    <ImageBrush ImageSource="C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\img\V6KSP6ZEUNGXBPZRBJTR25ZFIM.jpg" 
+                            Viewport="-80,0,700,580"
+                            ViewportUnits="Absolute"
+                            TileMode="None" />
+                </Border.Background>
+            </Border>
+        </Grid>
+
+
+
+
+        <!--<DataGrid Grid.Column="1" Name="Dataso" AutoGenerateColumns="False" ItemsSource="{Binding Items}"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Tipo" Width="*" Binding="{Binding tipo}"/>
+                <DataGridTextColumn Header="Nombre" Width="*" Binding="{Binding name}"/>
+            </DataGrid.Columns>
+        </DataGrid>-->
+    </Grid>
+
+</UserControl>

@@ -1,10 +1,14 @@
 ﻿C:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\App.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Controles\BarrasSearch.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Controles\Graphic_Bar.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Controles\Graphic_Cake.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Controles\TablaSearch.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\MainWindow.xaml;;
-FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\Gr_Barras.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl1.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl11.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl12.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl13.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl2.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl3.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl4.xaml;;
@@ -13,6 +17,14 @@ FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl6.xam
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl7.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl8.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\UserControls\UserControl9.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Views\DashBoard.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Views\View_ChampView.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Views\VIew_GenerateReport.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Views\View_Graphic.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Views\View_Info.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Views\View_Register.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Views\View_Stats.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Windows\Window1.xaml;;
 FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Windows\Window2.xaml;;
+FC:\Users\eecheto\Desktop\MyProjet\Prueba4\Prueba4\Windows\Window3.xaml;;
 

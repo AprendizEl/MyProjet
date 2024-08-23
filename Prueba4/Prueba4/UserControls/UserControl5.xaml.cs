@@ -61,7 +61,7 @@ namespace Prueba4
             //SeriesCollection.Add(lineSeriesR);
 
 
-            obj = UserControl3.Esca;
+            //obj = UserControl3.Esca;
             int Nitem = obj.Count;
             relleo();
             for (int i = 0; i < Nitem; i++)
