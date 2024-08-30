@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\eecheto\Desktop\Pruebas\prueba2\TheProject\TheProject\obj\Debug\net8.0-windows\
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\TheProject\TheProject\obj\Debug\net8.0-windows\
 TheProject
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\eecheto\Desktop\Pruebas\prueba2\TheProject\TheProject\App.xaml
-11407045341
+C:\Users\eecheto\Desktop\MyProjet\Prueba4\TheProject\TheProject\App.xaml
+102073433365
 
-8-491723609
-2171650030018
-MainWindow.xaml;
+22-1619264501
+2221898354234
+Controls\GrC.xaml;MainWindow.xaml;Styles\Botones.xaml;Styles\Colors.xaml;Styles\Light.xaml;Views\V_ContainerB.xaml;Views\V_DashBoard.xaml;Views\V_Load.xaml;Views\V_Login.xaml;Views\V_Register.xaml;
 
 True
 

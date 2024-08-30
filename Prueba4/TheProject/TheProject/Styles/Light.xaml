@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Color x:Key="GlowColor">#FFFF00</Color>
+
+    <!-- Define the animation for the glowing effect -->
+    <Storyboard x:Key="GlowAnimation">
+        <ColorAnimation
+            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+            From="{StaticResource GlowColor}"
+            To="#00FFFF"
+            Duration="0:0:1"
+            RepeatBehavior="Forever"
+            AutoReverse="True"/>
+    </Storyboard>
+
+    <!-- Define the style for the glowing progress bar -->
+    <Style x:Key="GlowingProgressBarStyle" TargetType="ProgressBar">
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#FFFF00"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Foreground" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Rectangle Fill="{TemplateBinding Background}" x:Name="PART_Indicator"
+                                   />
+ 
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsIndeterminate" Value="True">
+                            <Setter TargetName="PART_Indicator"
+                                    Property="Fill" Value="#FFFF00" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

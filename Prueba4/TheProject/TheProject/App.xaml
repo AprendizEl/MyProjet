@@ -2,8 +2,33 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:TheProject"
-             StartupUri="MainWindow.xaml">
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+             >
     <Application.Resources>
-         
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary  Source="/styles/Colors.xaml" />
+                <ResourceDictionary  Source="/Styles/Botones.xaml"/>
+                <ResourceDictionary  Source="/Styles/Light.xaml"/>
+
+
+
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="Indigo" SecondaryColor="Pink"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+
+
+
+            </ResourceDictionary.MergedDictionaries>
+            
+            
+            
+       </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

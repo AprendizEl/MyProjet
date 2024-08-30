@@ -1,0 +1,114 @@
+﻿<Window x:Class="TheProject.Views.V_Load"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TheProject.Views"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterOwner"
+        Title="Cargar Información" Height="200" Width="550" Icon="/Views/WhatsApp Image 2024-08-27 at 3.29.36 PM.jpeg">
+
+
+    <!--<StackPanel>
+        <Button Content="Comenzar" Click="OnStartClick" Margin="10" Width="100"/>
+        <Button Content="Cancelar" Click="OnCancelClick" Margin="10" Width="100"/>
+
+        <Grid Name="NumberGrid" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                --><!-- Define 10 rows --><!--
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                --><!-- Define 10 columns --><!--
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </StackPanel>-->
+
+
+
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" >
+
+                <Button x:Name="BT_Load" Width="100" Height="30" Content="Cargar Datos" Command="{Binding Bottons}" CommandParameter="1" />
+
+            </Grid>
+            
+            <Grid Grid.Column="1">
+                <ProgressBar x:Name="loadbar" Width="auto" Height="30" Margin="0,0,0,0"   />
+                <TextBlock Name="textstate" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+            </Grid>
+                
+           
+        </Grid>
+        
+
+        <!--<Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <ListBox x:Name="SourceListBox" Width="auto" Height="auto" Margin="10" />
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <ListBox x:Name="DestinationListBox" Width="auto" Height="auto" Margin="10" />
+            </Grid>
+
+
+        </Grid>-->
+
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <Button Content="Cancel" Width="100"  Margin="30,10" Command="{Binding Bottons}" CommandParameter="2"/>
+                <Button Content="Siguiente" Width="100" Name="BT_Nex" IsEnabled="False" Margin="30,10" Command="{Binding Bottons}" CommandParameter="3" />
+                
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+
+
+</Window>
